@@ -1,12 +1,14 @@
 :root {
   --fg: #121212;
   --bg: #FDFDFD;
+  --el: #00000006;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #212121;
     --fg: #DDDDDD;
+    --el: #ffffff06;
   }
 }
 
@@ -27,7 +29,6 @@ main {
   margin: 0 auto;
   max-width: 700px;
   min-height: 100vh;
-  ;
 }
 
 @media (max-width: 700px) {
@@ -70,12 +71,12 @@ blockquote {
   display: block;
   padding: 1rem 1.4rem;
   border-left: 0.25rem solid var(--fg);
-  background-color: rgba(0, 0, 0, .025);
+  background-color: var(--el);
 }
 
 @media (prefers-color-scheme: dark) {
   blockquote {
-    background-color: rgba(256, 256, 256, .025);
+    background-color: var(--el);
   }
 }
 
@@ -89,7 +90,6 @@ ul {
 img {
   margin: 1rem 0;
   width: 100%;
-  border-radius: 0.4rem;
 }
 
 figcaption {
