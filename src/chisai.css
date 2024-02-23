@@ -75,12 +75,6 @@ blockquote {
   background-color: var(--el);
 }
 
-@media (prefers-color-scheme: dark) {
-  blockquote {
-    background-color: var(--el);
-  }
-}
-
 ol,
 ul {
   display: block;
