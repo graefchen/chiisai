@@ -1,4 +1,4 @@
-<h1 align="center">chiisai.css</h1>
+<h1 align="center">chiisai</h1>
 
 <p align="center"><i>An experimental minimal modern css framework, designed to last</i></p>
 <hr>
