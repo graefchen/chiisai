@@ -1,0 +1,170 @@
+.bento {
+  display: grid;
+
+  &.gap-md {
+    gap: 1rem;
+  }
+
+  // Note:
+  //  While it is possible to autogenerate
+  //  all the grids per scss mixin
+  //  it seem's like the dart-sass compiler
+  //  does not like it, so all the boxes and
+  //  parts are all handwritten.
+  //  Furthermore to get away about the mixin
+  //  generating the same classes, writing the
+  //  code by itself gets away with some stuff.
+
+  // 2x2
+  &.\32x2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  
+  // 2x3
+  &.\32x3 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  // 3x2
+  &.\33x2{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  // 3x3
+  &.\33x3 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  // 4x2
+  &.\34x2 {
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  // 4x3
+  &.\34x3 {
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  // 2x4
+  &.\32x4 {
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  // 3x4
+  &.\33x4 {
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  // 4x4
+  &.\34x4 {
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  // The parts of the bento boxes
+  .part {
+    // 1x1
+    &.\31x1 {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+
+    // 1x2
+    &.\31x2 {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+
+    // 2x1
+    &.\32x1 {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+
+    // 2x2
+    &.\32x2 {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    // 1x3
+    &.\31x3 {
+      grid-column: span 3;
+      grid-row: span 1;
+    }
+
+    // 2x3
+    &.\32x3 {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
+
+    // 3x1
+    &.\33x1 {
+      grid-column: span 1;
+      grid-row: span 3;
+    }
+
+    // 2x3
+    &.\32x3 {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
+
+    // 3x3
+    &.\33x3 {
+      grid-column: span 3;
+      grid-row: span 3;
+    }
+
+    // 1x4
+    &.\31x4 {
+      grid-column: span 4;
+      grid-row: span 1;
+    }
+
+    // 2x4
+    &.\32x4 {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
+
+    // 3x4
+    &.\33x4 {
+      grid-column: span 4;
+      grid-row: span 3;
+    }
+
+    // 4x1
+    &.\34x1 {
+      grid-column: span 1;
+      grid-row: span 4;
+    }
+
+    // 4x2
+    &.\34x2 {
+      grid-column: span 2;
+      grid-row: span 4;
+    }
+
+    // 4x3
+    &.\34x3 {
+      grid-column: span 3;
+      grid-row: span 4;
+    }
+
+    // 4x4
+    &.\34x4 {
+      grid-column: span 4;
+      grid-row: span 4;
+    }
+  }
+}

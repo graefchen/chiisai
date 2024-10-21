@@ -1,4 +1,4 @@
-<h1 align="center">🌸 chiisai</h1>
+<h1 align="center">🍱 chiisai</h1>
 
 <p align="center"><i>An experimental modern scss framework</i></p>
 <hr>
