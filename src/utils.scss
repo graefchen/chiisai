@@ -1,0 +1,23 @@
+$shadow: rgba(0, 0, 0, 0.2);
+
+.shadow {
+  &-sm {
+    box-shadow: 0 2px 4px 0 $shadow, 0 3px 10px -2px $shadow;
+  }
+
+  &-md {
+    box-shadow: 0 4px 8px 0 $shadow, 0 6px 20px -4px $shadow;
+  }
+
+  &-lg {
+    box-shadow: 0 8px 16px 0 $shadow, 0 9px 30px -6px $shadow;
+  }
+
+  &-inner {
+    box-shadow: 0 2px 4px 0 $shadow;
+  }
+
+  &-none {
+    box-shadow: 0 0 #000;
+  }
+}

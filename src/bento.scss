@@ -1,10 +1,19 @@
+// Bento boxes
 @use "sass:list";
 
 .bento {
   display: grid;
 
+  &.gap-sm {
+    gap: 0.5rem;
+  }
+
   &.gap-md {
     gap: 1rem;
+  }
+
+  &.gap-lg {
+    gap: 2rem;
   }
 
   // Note(Important):
@@ -29,6 +38,7 @@
       &.\3#{$n}x#{$m} {
         grid-row: span $n;
         grid-column: span $m;
+        aspect-ratio: list.slash($n, $m);
       }
     }
 

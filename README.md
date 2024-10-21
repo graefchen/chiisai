@@ -21,7 +21,9 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
 ## Plan:
 
 - inspired by charm.sh
-- ~~use Humanist Sans-Serif Font~~ [M PLUS 2](https://fonts.google.com/specimen/M+PLUS+2)
+- ~~use Humanist Sans-Serif Font~~
+  - [M PLUS 2](https://fonts.google.com/specimen/M+PLUS+2)
+  - [github](https://mplusfonts.github.io)
 - colour inspired by certain "games"
   - art of rally
   - En Garde
