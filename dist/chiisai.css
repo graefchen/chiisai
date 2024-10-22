@@ -2,19 +2,63 @@
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+}
+
 html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  font-family: "M PLUS Rounded", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "M PLUS 2", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+ul[role=list], ol[role=list] {
+  list-style: none;
+}
+
+body {
+  min-height: 100svh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialised;
+}
+
+h1, h2, h3, h4, button, input, label {
+  line-height: 1.1;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
   overflow-wrap: break-word;
 }
 
-img {
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+a:not([href]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
   max-width: 100%;
+}
+
+img, picture, video {
   object-fit: cover;
 }
 
@@ -32,6 +76,61 @@ img {
   --color8: #ffffff;
   --color9: #272727;
   --color10: #c39eab;
+}
+
+.font-100 {
+  font-weight: 100;
+}
+.font-200 {
+  font-weight: 200;
+}
+.font-300 {
+  font-weight: 300;
+}
+.font-400 {
+  font-weight: 400;
+}
+.font-500 {
+  font-weight: 500;
+}
+.font-600 {
+  font-weight: 600;
+}
+.font-700 {
+  font-weight: 700;
+}
+.font-800 {
+  font-weight: 800;
+}
+.font-900 {
+  font-weight: 900;
+}
+.font-thin {
+  font-weight: 100;
+}
+.font-extralight {
+  font-weight: 200;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-regular {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-extrabold {
+  font-weight: 800;
+}
+.font-black {
+  font-weight: 900;
 }
 
 .bento {
@@ -185,8 +284,13 @@ img {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 9px 30px -6px rgba(0, 0, 0, 0.2);
 }
 .shadow-inner {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 .shadow-none {
   box-shadow: 0 0 #000;
+}
+
+.full-screen {
+  height: 100svh;
+  width: 100svw;
 }

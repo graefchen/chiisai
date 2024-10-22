@@ -14,10 +14,15 @@ $shadow: rgba(0, 0, 0, 0.2);
   }
 
   &-inner {
-    box-shadow: 0 2px 4px 0 $shadow;
+    box-shadow: inset 0 2px 4px 0 $shadow;
   }
 
   &-none {
     box-shadow: 0 0 #000;
   }
+}
+
+.full-screen {
+  height: 100svh;
+  width: 100svw;
 }
