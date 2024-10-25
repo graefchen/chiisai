@@ -1,23 +1,25 @@
 // Typography things
 
 .font {
-  // Orignal way of doing it:
-  // Which coresponds with just numbers
-  @for $i from 1 to 10 {
-    &-#{$i*100} {
-      font-weight: $i*100;
-    }
-  }
-
   @mixin weight-generator($selectors...) {
     @for $i from 0 to length($selectors) {
-      &-#{nth($selectors, $i+1)} {
-        font-weight: ($i+1)*100;
+      &-#{nth($selectors, $i + 1)} {
+        font-weight: ($i + 1) * 100;
       }
     }
   }
 
   // A way more elegant way to making it
   // based on: https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#common_weight_name_mapping
-  @include weight-generator("thin", "extralight", "light", "regular", "medium", "semibold", "bold", "extrabold", "black");
+  @include weight-generator(
+    "thin",
+    "extralight",
+    "light",
+    "regular",
+    "medium",
+    "semibold",
+    "bold",
+    "extrabold",
+    "black",
+  );
 }

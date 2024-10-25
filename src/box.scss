@@ -1,1 +1,32 @@
 // boxes, boxes, boxes, I love boxes
+
+$red: red;
+$green: green;
+$blue: blue;
+$yellow: yellow;
+$pink: pink;
+$orange: orange;
+$brown: brown;
+$white: white;
+
+.box {
+  border-radius: 1rem;
+  padding: 0.5rem;
+
+  @mixin color($name, $background-color, $border-color) {
+    .is-#{$name} {
+      background-color: $background-color;
+      border-color: $border-color;
+      border-style: solid;
+    }
+  }
+
+  @include color("red", $red, $red);
+  @include color("green", $green, $green);
+  @include color("blue", $blue, $blue);
+  @include color("yellow", $yellow, $yellow);
+  @include color("pink", $pink, $pink);
+  @include color("orange", $orange, $orange);
+  @include color("browns", $brown, $brown);
+  @include color("white", $white, $white);
+}

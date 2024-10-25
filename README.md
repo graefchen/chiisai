@@ -23,20 +23,13 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
 - inspired by charm.sh
 - ~~use Humanist Sans-Serif Font~~
   - [M PLUS 2](https://fonts.google.com/specimen/M+PLUS+2)
-  - [github](https://mplusfonts.github.io)
-- colour inspired by certain "games"
-  - art of rally
-  - En Garde
-  - Minami Lane
-  - Virtual Cottage
-  - Tiny Glade
+  - [webpage](https://mplusfonts.github.io)
 - clean buttons
 - **_rounded corners_** -> _friendly_
 - bento boxes (!!!) [ref](https://bentogrids.com)
 - (blurred) shadows
-- good looking animations
+- good looking animations(?)
 - "modern" colours (dark mode/light mode) rely heavy on pastel/moody colours
-- classless (?)
 - components & atomic modification
   - <https://smacss.com/book/categorizing/>
 - try to stay light to medium complexity
@@ -44,7 +37,6 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
   - complexity 10: <https://getbootstrap.com/>, <https://bulma.io/>
   - chiisai: 4 to 7
 - mobile first - responsiveness first
-- gradients / glow
 - defensive css <https://defensivecss.dev>
 - animal crossing wiki(?) [ref](https://nookipedia.com/wiki/Main_Page)
 - ~~try to keep it small, don't put in way to many components~~
