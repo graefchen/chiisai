@@ -1,9 +1,4 @@
-@import "normalize.scss";
-@import "colors.scss";
-@import "typography.scss";
-
-@import "button.scss";
-@import "box.scss";
-@import "bento.scss";
-
-@import "utils.scss";
+@forward "base";
+@forward "themes";
+@forward "components";
+@forward "utilities";
