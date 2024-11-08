@@ -62,22 +62,6 @@ img, picture, video {
   object-fit: cover;
 }
 
-:root {
-  --fg: #121212;
-  --bg: #fdfdfd;
-  --el: #00000006;
-  --color1: #64263c;
-  --color2: #3f1826;
-  --color3: #f9d1ae;
-  --color4: #a71b1b;
-  --color5: #2f5cfe;
-  --color6: #f0cece;
-  --color7: #fee43e;
-  --color8: #ffffff;
-  --color9: #272727;
-  --color10: #c39eab;
-}
-
 .font-thin {
   font-weight: 100;
 }
@@ -106,6 +90,88 @@ img, picture, video {
   font-weight: 900;
 }
 
+:root {
+  --background: #ECECEC;
+  --foreground: #121212;
+  --pink: #FF65AD;
+  --pink-border: ;
+  --red: #FF7573;
+  --red-border: ;
+  --orange: #FF6500;
+  --orange-border: ;
+  --peach: #FFBA8C;
+  --peach-border: ;
+  --purple: #EF8AFF;
+  --purple-border: ;
+  --fuchsia: #FF55EF;
+  --fuchsia-border: ;
+  --brown: #AD7542;
+  --brown-border: ;
+  --yellow: #FFFF73;
+  --yellow-border: ;
+  --indigo: #BD9AEF;
+  --indigo-border: ;
+  --blue: #8C9AFF;
+  --blue-border: ;
+  --dark-green: #63CF73;
+  --dark-green-border: ;
+  --light-green: #CEFF8C;
+  --light-green-border: ;
+  --slate-blue: #73CFFF;
+  --slate-blue-border: ;
+  --light-blue: #00CFFF;
+  --light-blue-border: ;
+  --ocean-blue: #00FFCE;
+  --ocean-blue-border: ;
+  --green: #ADFFAD;
+  --green-border: ;
+}
+
+.box {
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+.box .is-red {
+  background-color: red;
+  border-color: red;
+  border-style: solid;
+}
+.box .is-green {
+  background-color: green;
+  border-color: green;
+  border-style: solid;
+}
+.box .is-blue {
+  background-color: blue;
+  border-color: blue;
+  border-style: solid;
+}
+.box .is-yellow {
+  background-color: yellow;
+  border-color: yellow;
+  border-style: solid;
+}
+.box .is-pink {
+  background-color: pink;
+  border-color: pink;
+  border-style: solid;
+}
+.box .is-orange {
+  background-color: orange;
+  border-color: orange;
+  border-style: solid;
+}
+.box .is-browns {
+  background-color: brown;
+  border-color: brown;
+  border-style: solid;
+}
+.box .is-white {
+  background-color: white;
+  border-color: white;
+  border-style: solid;
+}
+
 .bento {
   display: grid;
 }
@@ -122,46 +188,55 @@ img, picture, video {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
   aspect-ratio: 2 / 2;
+  grid-auto-flow: dense;
 }
 .bento.\33 x2 {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
   aspect-ratio: 3 / 2;
+  grid-auto-flow: dense;
 }
 .bento.\34 x2 {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(4, 1fr);
   aspect-ratio: 4 / 2;
+  grid-auto-flow: dense;
 }
 .bento.\32 x3 {
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
   aspect-ratio: 2 / 3;
+  grid-auto-flow: dense;
 }
 .bento.\33 x3 {
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   aspect-ratio: 3 / 3;
+  grid-auto-flow: dense;
 }
 .bento.\34 x3 {
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(4, 1fr);
   aspect-ratio: 4 / 3;
+  grid-auto-flow: dense;
 }
 .bento.\32 x4 {
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(2, 1fr);
   aspect-ratio: 2 / 4;
+  grid-auto-flow: dense;
 }
 .bento.\33 x4 {
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(3, 1fr);
   aspect-ratio: 3 / 4;
+  grid-auto-flow: dense;
 }
 .bento.\34 x4 {
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(4, 1fr);
   aspect-ratio: 4 / 4;
+  grid-auto-flow: dense;
 }
 .bento .part.\31 x1 {
   grid-row: span 1;
