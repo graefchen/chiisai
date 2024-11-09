@@ -131,44 +131,84 @@ img, picture, video {
   border-radius: 1rem;
   padding: 0.5rem;
 }
-.box .is-red {
-  background-color: red;
-  border-color: red;
-  border-style: solid;
-}
-.box .is-green {
-  background-color: green;
-  border-color: green;
-  border-style: solid;
-}
-.box .is-blue {
-  background-color: blue;
-  border-color: blue;
-  border-style: solid;
-}
-.box .is-yellow {
-  background-color: yellow;
-  border-color: yellow;
-  border-style: solid;
-}
 .box .is-pink {
-  background-color: pink;
-  border-color: pink;
+  background-color: var(--pink);
+  border-color: var(--pink-border);
+  border-style: solid;
+}
+.box .is-red {
+  background-color: var(--red);
+  border-color: var(--red-border);
   border-style: solid;
 }
 .box .is-orange {
-  background-color: orange;
-  border-color: orange;
+  background-color: var(--orange);
+  border-color: var(--orange-border);
   border-style: solid;
 }
-.box .is-browns {
-  background-color: brown;
-  border-color: brown;
+.box .is-peach {
+  background-color: var(--peach);
+  border-color: var(--peach-border);
   border-style: solid;
 }
-.box .is-white {
-  background-color: white;
-  border-color: white;
+.box .is-purple {
+  background-color: var(--purple);
+  border-color: var(--purple-border);
+  border-style: solid;
+}
+.box .is-fuchsia {
+  background-color: var(--fuchsia);
+  border-color: var(--fuchsia-border);
+  border-style: solid;
+}
+.box .is-brown {
+  background-color: var(--brown);
+  border-color: var(--brown-border);
+  border-style: solid;
+}
+.box .is-yellow {
+  background-color: var(--yellow);
+  border-color: var(--yellow-border);
+  border-style: solid;
+}
+.box .is-indigo {
+  background-color: var(--indigo);
+  border-color: var(--indigo-border);
+  border-style: solid;
+}
+.box .is-blue {
+  background-color: var(--blue);
+  border-color: var(--blue-border);
+  border-style: solid;
+}
+.box .is-dark-green {
+  background-color: var(--dark-green);
+  border-color: var(--dark-green-border);
+  border-style: solid;
+}
+.box .is-light-green {
+  background-color: var(--light-green);
+  border-color: var(--light-green-border);
+  border-style: solid;
+}
+.box .is-slate-blue {
+  background-color: var(--slate-blue);
+  border-color: var(--slate-blue-border);
+  border-style: solid;
+}
+.box .is-light-blue {
+  background-color: var(--light-blue);
+  border-color: var(--light-blue-border);
+  border-style: solid;
+}
+.box .is-ocean-blue {
+  background-color: var(--ocean-blue);
+  border-color: var(--ocean-blue-border);
+  border-style: solid;
+}
+.box .is-green {
+  background-color: var(--green);
+  border-color: var(--green-border);
   border-style: solid;
 }
 
