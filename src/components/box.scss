@@ -1,13 +1,5 @@
 // boxes, boxes, boxes, I love boxes
-
-$red: red;
-$green: green;
-$blue: blue;
-$yellow: yellow;
-$pink: pink;
-$orange: orange;
-$brown: brown;
-$white: white;
+@import "../utilities/colors.scss";
 
 .box {
   border-radius: 1rem;
@@ -21,12 +13,7 @@ $white: white;
     }
   }
 
-  @include color("red", $red, $red);
-  @include color("green", $green, $green);
-  @include color("blue", $blue, $blue);
-  @include color("yellow", $yellow, $yellow);
-  @include color("pink", $pink, $pink);
-  @include color("orange", $orange, $orange);
-  @include color("browns", $brown, $brown);
-  @include color("white", $white, $white);
+  @each $color in $colors {
+    @include color(#{$color}, var(--#{$color}), var(--#{$color}-border));
+  }
 }

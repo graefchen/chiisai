@@ -24,6 +24,8 @@
       grid-template-columns: repeat($n, 1fr);
       aspect-ratio: list.slash($n, $m);
       grid-auto-flow: dense;
+      // Add when added to browser
+      // reading-flow: grid-rows;
     }
   }
 
