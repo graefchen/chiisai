@@ -1,5 +1,5 @@
 // boxes, boxes, boxes, I love boxes
-@import "../utilities/colors.scss";
+@use "../utilities/colors.scss" as *;
 
 .box {
   border-radius: 1rem;
