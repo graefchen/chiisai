@@ -24,14 +24,12 @@
       grid-template-columns: repeat($n, 1fr);
       aspect-ratio: list.slash($n, $m);
       grid-auto-flow: dense;
-      overflow: hidden;
       // Add when added to browser
       // reading-flow: grid-rows;
 
       *{
         grid-row: span 1;
         grid-column: span 1;
-        aspect-ratio: list.slash(1,1)
       }
     }
   }
@@ -48,7 +46,6 @@
       &.\3#{$n}x#{$m} {
         grid-row: span $n;
         grid-column: span $m;
-        aspect-ratio: list.slash($n, $m);
       }
     }
 
