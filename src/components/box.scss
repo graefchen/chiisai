@@ -6,7 +6,7 @@
   padding: 0.5rem;
 
   @mixin color($name, $background-color, $border-color) {
-    .is-#{$name} {
+    &.is-#{$name} {
       background-color: $background-color;
       border-color: $border-color;
       border-style: solid;
