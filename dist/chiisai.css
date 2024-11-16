@@ -1,3 +1,48 @@
+:root {
+  --background: #ECECEC;
+  --foreground: #121212;
+  --light-shadow: #0001;
+  --pink: #FF65AD;
+  --pink-border: ;
+  --red: #FF7573;
+  --red-border: ;
+  --orange: #FF6500;
+  --orange-border: ;
+  --peach: #FFBA8C;
+  --peach-border: ;
+  --purple: #EF8AFF;
+  --purple-border: ;
+  --fuchsia: #FF55EF;
+  --fuchsia-border: ;
+  --brown: #AD7542;
+  --brown-border: ;
+  --yellow: #FFFF73;
+  --yellow-border: ;
+  --indigo: #BD9AEF;
+  --indigo-border: ;
+  --blue: #8C9AFF;
+  --blue-border: ;
+  --dark-green: #63CF73;
+  --dark-green-border: ;
+  --light-green: #CEFF8C;
+  --light-green-border: ;
+  --slate-blue: #73CFFF;
+  --slate-blue-border: ;
+  --light-blue: #00CFFF;
+  --light-blue-border: ;
+  --ocean-blue: #00FFCE;
+  --ocean-blue-border: ;
+  --green: #ADFFAD;
+  --green-border: ;
+}
+
+@media (prefers-reduced-motion) {
+  *, *::before, *::after {
+    animation-duration: 0s !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -62,6 +107,23 @@ img, picture, video {
   object-fit: cover;
 }
 
+table {
+  border-spacing: 0px;
+}
+
+td, th {
+  padding: 0.5em;
+}
+
+th {
+  position: sticky;
+  top: 0;
+}
+
+:is(tbody, table) > tr:nth-child(odd) {
+  background: var(--light-shadows);
+}
+
 .font-thin {
   font-weight: 100;
 }
@@ -90,43 +152,6 @@ img, picture, video {
   font-weight: 900;
 }
 
-:root {
-  --background: #ECECEC;
-  --foreground: #121212;
-  --pink: #FF65AD;
-  --pink-border: ;
-  --red: #FF7573;
-  --red-border: ;
-  --orange: #FF6500;
-  --orange-border: ;
-  --peach: #FFBA8C;
-  --peach-border: ;
-  --purple: #EF8AFF;
-  --purple-border: ;
-  --fuchsia: #FF55EF;
-  --fuchsia-border: ;
-  --brown: #AD7542;
-  --brown-border: ;
-  --yellow: #FFFF73;
-  --yellow-border: ;
-  --indigo: #BD9AEF;
-  --indigo-border: ;
-  --blue: #8C9AFF;
-  --blue-border: ;
-  --dark-green: #63CF73;
-  --dark-green-border: ;
-  --light-green: #CEFF8C;
-  --light-green-border: ;
-  --slate-blue: #73CFFF;
-  --slate-blue-border: ;
-  --light-blue: #00CFFF;
-  --light-blue-border: ;
-  --ocean-blue: #00FFCE;
-  --ocean-blue-border: ;
-  --green: #ADFFAD;
-  --green-border: ;
-}
-
 .box {
   border-radius: 1rem;
   padding: 0.5rem;
@@ -136,80 +161,128 @@ img, picture, video {
   border-color: var(--pink-border);
   border-style: solid;
 }
+.box.is-pink *, .box.is-pink .inner-box {
+  background-color: var(--pink-inner);
+}
 .box.is-red {
   background-color: var(--red);
   border-color: var(--red-border);
   border-style: solid;
+}
+.box.is-red *, .box.is-red .inner-box {
+  background-color: var(--red-inner);
 }
 .box.is-orange {
   background-color: var(--orange);
   border-color: var(--orange-border);
   border-style: solid;
 }
+.box.is-orange *, .box.is-orange .inner-box {
+  background-color: var(--orange-inner);
+}
 .box.is-peach {
   background-color: var(--peach);
   border-color: var(--peach-border);
   border-style: solid;
+}
+.box.is-peach *, .box.is-peach .inner-box {
+  background-color: var(--peach-inner);
 }
 .box.is-purple {
   background-color: var(--purple);
   border-color: var(--purple-border);
   border-style: solid;
 }
+.box.is-purple *, .box.is-purple .inner-box {
+  background-color: var(--purple-inner);
+}
 .box.is-fuchsia {
   background-color: var(--fuchsia);
   border-color: var(--fuchsia-border);
   border-style: solid;
+}
+.box.is-fuchsia *, .box.is-fuchsia .inner-box {
+  background-color: var(--fuchsia-inner);
 }
 .box.is-brown {
   background-color: var(--brown);
   border-color: var(--brown-border);
   border-style: solid;
 }
+.box.is-brown *, .box.is-brown .inner-box {
+  background-color: var(--brown-inner);
+}
 .box.is-yellow {
   background-color: var(--yellow);
   border-color: var(--yellow-border);
   border-style: solid;
+}
+.box.is-yellow *, .box.is-yellow .inner-box {
+  background-color: var(--yellow-inner);
 }
 .box.is-indigo {
   background-color: var(--indigo);
   border-color: var(--indigo-border);
   border-style: solid;
 }
+.box.is-indigo *, .box.is-indigo .inner-box {
+  background-color: var(--indigo-inner);
+}
 .box.is-blue {
   background-color: var(--blue);
   border-color: var(--blue-border);
   border-style: solid;
+}
+.box.is-blue *, .box.is-blue .inner-box {
+  background-color: var(--blue-inner);
 }
 .box.is-dark-green {
   background-color: var(--dark-green);
   border-color: var(--dark-green-border);
   border-style: solid;
 }
+.box.is-dark-green *, .box.is-dark-green .inner-box {
+  background-color: var(--dark-green-inner);
+}
 .box.is-light-green {
   background-color: var(--light-green);
   border-color: var(--light-green-border);
   border-style: solid;
+}
+.box.is-light-green *, .box.is-light-green .inner-box {
+  background-color: var(--light-green-inner);
 }
 .box.is-slate-blue {
   background-color: var(--slate-blue);
   border-color: var(--slate-blue-border);
   border-style: solid;
 }
+.box.is-slate-blue *, .box.is-slate-blue .inner-box {
+  background-color: var(--slate-blue-inner);
+}
 .box.is-light-blue {
   background-color: var(--light-blue);
   border-color: var(--light-blue-border);
   border-style: solid;
+}
+.box.is-light-blue *, .box.is-light-blue .inner-box {
+  background-color: var(--light-blue-inner);
 }
 .box.is-ocean-blue {
   background-color: var(--ocean-blue);
   border-color: var(--ocean-blue-border);
   border-style: solid;
 }
+.box.is-ocean-blue *, .box.is-ocean-blue .inner-box {
+  background-color: var(--ocean-blue-inner);
+}
 .box.is-green {
   background-color: var(--green);
   border-color: var(--green-border);
   border-style: solid;
+}
+.box.is-green *, .box.is-green .inner-box {
+  background-color: var(--green-inner);
 }
 
 .bento {
@@ -229,7 +302,6 @@ img, picture, video {
   grid-template-columns: repeat(2, 1fr);
   aspect-ratio: 2 / 2;
   grid-auto-flow: dense;
-  overflow-block: hidden;
 }
 .bento.\32 x2 * {
   grid-row: span 1;
@@ -240,7 +312,6 @@ img, picture, video {
   grid-template-columns: repeat(3, 1fr);
   aspect-ratio: 3 / 2;
   grid-auto-flow: dense;
-  overflow-block: hidden;
 }
 .bento.\33 x2 * {
   grid-row: span 1;
@@ -251,7 +322,6 @@ img, picture, video {
   grid-template-columns: repeat(4, 1fr);
   aspect-ratio: 4 / 2;
   grid-auto-flow: dense;
-  overflow-block: hidden;
 }
 .bento.\34 x2 * {
   grid-row: span 1;
@@ -262,7 +332,6 @@ img, picture, video {
   grid-template-columns: repeat(2, 1fr);
   aspect-ratio: 2 / 3;
   grid-auto-flow: dense;
-  overflow-block: hidden;
 }
 .bento.\32 x3 * {
   grid-row: span 1;
@@ -273,7 +342,6 @@ img, picture, video {
   grid-template-columns: repeat(3, 1fr);
   aspect-ratio: 3 / 3;
   grid-auto-flow: dense;
-  overflow-block: hidden;
 }
 .bento.\33 x3 * {
   grid-row: span 1;
@@ -284,7 +352,6 @@ img, picture, video {
   grid-template-columns: repeat(4, 1fr);
   aspect-ratio: 4 / 3;
   grid-auto-flow: dense;
-  overflow-block: hidden;
 }
 .bento.\34 x3 * {
   grid-row: span 1;
@@ -295,7 +362,6 @@ img, picture, video {
   grid-template-columns: repeat(2, 1fr);
   aspect-ratio: 2 / 4;
   grid-auto-flow: dense;
-  overflow-block: hidden;
 }
 .bento.\32 x4 * {
   grid-row: span 1;
@@ -306,7 +372,6 @@ img, picture, video {
   grid-template-columns: repeat(3, 1fr);
   aspect-ratio: 3 / 4;
   grid-auto-flow: dense;
-  overflow-block: hidden;
 }
 .bento.\33 x4 * {
   grid-row: span 1;
@@ -317,7 +382,6 @@ img, picture, video {
   grid-template-columns: repeat(4, 1fr);
   aspect-ratio: 4 / 4;
   grid-auto-flow: dense;
-  overflow-block: hidden;
 }
 .bento.\34 x4 * {
   grid-row: span 1;
