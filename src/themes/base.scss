@@ -6,6 +6,7 @@
 :root {
   --background: #ECECEC;
   --foreground: #121212;
+  --light-shadow: #0001;
 
   @include color("pink", #FF65AD, "");
   @include color("red", #FF7573, "");

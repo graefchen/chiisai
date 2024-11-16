@@ -5,15 +5,19 @@
   border-radius: 1rem;
   padding: 0.5rem;
 
-  @mixin color($name, $background-color, $border-color) {
+  @mixin color($name, $background-color, $border-color, $inner-color) {
     &.is-#{$name} {
       background-color: $background-color;
       border-color: $border-color;
       border-style: solid;
+
+      *,.inner-box{
+        background-color: $inner-color
+      }
     }
   }
 
   @each $color in $colors {
-    @include color(#{$color}, var(--#{$color}), var(--#{$color}-border));
+    @include color(#{$color}, var(--#{$color}), var(--#{$color}-border), var(--#{$color}-inner));
   }
 }
