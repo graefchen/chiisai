@@ -41,6 +41,7 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
   - complexity 10: <https://getbootstrap.com/>, <https://bulma.io/>
   - chiisai: 4 to 7
 - mobile first - responsiveness first
+- develop for _[all](https://youtu.be/su6WA0kUUJE)_ sizes
 - defensive css <https://defensivecss.dev>
 - animal crossing wiki(?) [ref](https://nookipedia.com/wiki/Main_Page)
 - ~~try to keep it small, don't put in way to many components~~
