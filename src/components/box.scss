@@ -2,19 +2,29 @@
 @use "../utilities/colors.scss" as *;
 
 .box {
-  border-radius: 1rem;
-  padding: 0.5rem;
+  border: 3px solid;
+  border-radius: 10px;
+  padding: 5px;
+
+  &:hover {
+    transform: scale(1.05)
+  }
 
   @mixin color($name, $background-color, $border-color, $inner-color) {
     &.is-#{$name} {
       background-color: $background-color;
       border-color: $border-color;
-      border-style: solid;
 
-      *,.inner-box{
-        background-color: $inner-color
+      .inner-box{
+        background-color: $inner-color;
+        border-radius: 15px;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 10px 15px;
+        padding: 5px;
       }
     }
+
   }
 
   @each $color in $colors {

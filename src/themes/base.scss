@@ -1,29 +1,30 @@
-@mixin color($name, $color, $border) {
+@mixin color($name, $color, $border, $inner) {
   --#{$name}: #{$color};
   --#{$name}-border: #{$border};
+  --#{$name}-inner: #{$inner};
 }
 
 :root {
-  --background: #ECECEC;
+  --background: #ececec;
   --foreground: #121212;
   --light-shadow: #0001;
 
-  @include color("pink", #FF65AD, "");
-  @include color("red", #FF7573, "");
-  @include color("orange", #FF6500, "");
-  @include color("peach", #FFBA8C, "");
-  @include color("purple", #EF8AFF, "");
-  @include color("fuchsia", #FF55EF, "");
-  @include color("brown", #AD7542, "");
-  @include color("yellow", #FFFF73, "");
-  @include color("indigo", #BD9AEF, "");
-  @include color("blue", #8C9AFF, "");
-  @include color("dark-green", #63CF73, "");
-  @include color("light-green", #CEFF8C, "");
-  @include color("slate-blue", #73CFFF, "");
-  @include color("light-blue", #00CFFF, "");
-  @include color("ocean-blue", #00FFCE, "");
-  @include color("green", #ADFFAD, "");
+  @include color("pink", #ff65ad, "","");
+  @include color("red", #ff7573, "","");
+  @include color("orange", #ff6500, "","");
+  @include color("peach", #ffba8c, "","");
+  @include color("purple", #ef8aff, "","");
+  @include color("fuchsia", #ff55ef, "","");
+  @include color("brown", #ad7542, "","");
+  @include color("yellow", #ffff73, "","");
+  @include color("indigo", #bd9aef, "","");
+  @include color("blue", #8c9aff, "","");
+  @include color("dark-green", #63cf73, "","");
+  @include color("light-green", #ceff8c, "","");
+  @include color("slate-blue", #73cfff, "","");
+  @include color("light-blue", #00cfff, "","");
+  @include color("ocean-blue", #00ffce, "","");
+  @include color("green", #adffad, "","");
 }
 
 // @media (prefers-color-scheme: dark) {
