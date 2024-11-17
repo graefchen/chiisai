@@ -16,7 +16,7 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
 ## Inspiration's
 
 - https://charm.sh
-- https://bentogrids.
+- https://bentogrids.com
 - https://nookipedia.com/wiki/Main_Page
 - [Hyperplexed - Websites Need More Mario UI](https://youtu.be/x872keruUWQ?si=6xeduMSppN0E1DlP)
 - [Web Design Engineering With the New CSS | Matthias Ott](https://youtu.be/su6WA0kUUJE?si=2N7K4UFs6SLr8Npx)
