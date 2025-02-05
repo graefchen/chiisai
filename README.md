@@ -15,7 +15,6 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
 
 ## Inspiration's
 
-- https://charm.sh
 - https://bentogrids.com
 - https://nookipedia.com/wiki/Main_Page
 - [Hyperplexed - Websites Need More Mario UI](https://youtu.be/x872keruUWQ?si=6xeduMSppN0E1DlP)
@@ -23,8 +22,12 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
 
 ## Plan:
 
-- inspired by charm.sh
+- heavily inspired by [Animal Crossing: New Leaf](https://en.wikipedia.org/wiki/Animal_Crossing:_New_Leaf)
+  - [New Leaf Gallery](https://nookipedia.com/wiki/Animal_Crossing:_New_Leaf/Gallery)
+  - Colours: [ref](https://gist.github.com/Wunkolo/e0e1c8fef98dfcee806b)
+  - [Nintendo 3DS Themes](https://nookipedia.com/wiki/Category:Nintendo_3DS_themes)
 - ~~use Humanist Sans-Serif Font~~
+  - [M PLUS Rounded 1c](https://fonts.google.com/specimen/M+PLUS+Rounded+1c?query=m+plus+)
   - [M PLUS 2](https://fonts.google.com/specimen/M+PLUS+2)
   - [webpage](https://mplusfonts.github.io)
 - clean buttons
@@ -33,14 +36,14 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
   - <https://ibelick.com/blog/create-bento-grid-layouts>
 - (blurred) shadows
 - good looking animations(?)
-- "modern" colours (dark mode/light mode) rely heavy on pastel/moody colours
+- animal crossing new leaf colours (only light mode)
 - components & atomic modification
   - <https://smacss.com/book/categorizing/>
 - try to stay light to medium complexity
   - complexity 1: <https://milligram.io/>
   - complexity 10: <https://getbootstrap.com/>, <https://bulma.io/>
   - chiisai: 4 to 7
-- mobile first - responsiveness first
+- ~~mobile first~~ responsiveness first
 - develop for _[all](https://youtu.be/su6WA0kUUJE)_ sizes
 - defensive css <https://defensivecss.dev>
 - animal crossing wiki(?) [ref](https://nookipedia.com/wiki/Main_Page)

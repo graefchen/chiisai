@@ -26,3 +26,7 @@ $shadow: rgba(0, 0, 0, 0.2);
   height: 100svh;
   width: 100svw;
 }
+
+.normal-background {
+  background-color: var(--background);
+}

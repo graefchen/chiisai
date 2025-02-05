@@ -20,5 +20,5 @@ th {
 }
 
 :is(tbody, table) > tr:nth-child(odd) {
-  background: var(--light-shadows);
+  background: var(--light-shadow);
 }
