@@ -1,6 +1,8 @@
 // Typography things
 @use "sass:list";
 
+/* Using fluid web typography */
+
 .font {
   @mixin weight-generator($selectors...) {
     @for $i from 0 to list.length($selectors) {
@@ -21,6 +23,38 @@
     "semibold",
     "bold",
     "extrabold",
-    "black",
+    "black"
   );
+
+  &-extrablack {
+    font-weight: 950;
+  }
+}
+
+h1, .size-1 {
+  font-size: var(--font-step-6);
+}
+
+h2, .size-2 {
+  font-size: var(--font-step-5);
+}
+
+h3, .size-3 {
+  font-size: var(--font-step-4);
+}
+
+h4, .size-4 {
+  font-size: var(--font-step-3);
+}
+
+h5, .size-5 {
+  font-size: var(--font-step-2);
+}
+
+h6, .size-6 {
+  font-size: var(--font-step-1);
+}
+
+body, p, .size-7 {
+  font-size: var(--font-step-0);
 }

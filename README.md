@@ -15,7 +15,6 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
 
 ## Inspiration's
 
-- https://bentogrids.com
 - https://nookipedia.com/wiki/Main_Page
 - [Hyperplexed - Websites Need More Mario UI](https://youtu.be/x872keruUWQ?si=6xeduMSppN0E1DlP)
 - [Web Design Engineering With the New CSS | Matthias Ott](https://youtu.be/su6WA0kUUJE?si=2N7K4UFs6SLr8Npx)
@@ -32,7 +31,7 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
   - [webpage](https://mplusfonts.github.io)
 - clean buttons
 - **_rounded corners_** -> _friendly_
-- bento boxes (!!!) [ref](https://bentogrids.com)
+- some easy bento box layouts [ref](https://bentogrids.com)
   - <https://ibelick.com/blog/create-bento-grid-layouts>
 - (blurred) shadows
 - good looking animations(?)
@@ -40,7 +39,7 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
 - components & atomic modification
   - <https://smacss.com/book/categorizing/>
 - try to stay light to medium complexity
-  - complexity 1: <https://milligram.io/>
+  - complexity 1: <https://ajusa.github.io/lit/>
   - complexity 10: <https://getbootstrap.com/>, <https://bulma.io/>
   - chiisai: 4 to 7
 - ~~mobile first~~ responsiveness first

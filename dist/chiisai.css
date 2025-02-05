@@ -1,81 +1,77 @@
+/* The base of chiisa - the colours amd other important things
+   like the normalisation of the css style and then the accessibility ...
+   which (TODO:) needs a lot of work as it only has motion reducing
+   css acessability features.
+   many of these features diretly affect the styles as the change the
+   style of the element.
+*/
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
 :root {
   --background: #ececec;
   --foreground: #121212;
   --light-shadow: #0001;
-  --pink: #ff65ad;
-  --pink-border: #ff0063;
-  --pink-inner: #ffefff;
-  --pink-background: #ffefff;
-  --red: #ff7573;
-  --red-border: #ff7573;
-  --red-inner: #ffbace;
-  --red-background: #ffbace;
-  --orange: #ff6500;
-  --orange-border: #ff6500;
-  --orange-inner: #decfbd;
-  --orange-background: #decfbd;
-  --peach: #ffba8c;
-  --peach-border: #ffaa8c;
-  --peach-inner: #ffefde;
-  --peach-background: #ffefde;
-  --purple: #ef8aff;
-  --purple-border: #ce00ff;
-  --purple-inner: #ffcfff;
-  --purple-background: #ffcfff;
-  --fuchsia: #ff55ef;
-  --fuchsia-border: #ff00ce;
-  --fuchsia-inner: #ffbaff;
-  --fuchsia-background: #ffbaff;
-  --brown: #ad7542;
-  --brown-border: #9c3000;
-  --brown-inner: #deba9c;
-  --brown-background: #deba9c;
   --yellow: #ffff73;
   --yellow-border: #ffdf00;
   --yellow-inner: #ffffce;
-  --yellow-background: #ffffce;
-  --indigo: #bd9aef;
-  --indigo-border: #6300ff;
-  --indigo-inner: #debaff;
-  --indigo-background: #debaff;
+  --pink: #ff65ad;
+  --pink-border: #ff0063;
+  --pink-inner: #ffefff;
+  --purple: #ef8aff;
+  --purple-border: #ce00ff;
+  --purple-inner: #ffcfff;
   --blue: #8c9aff;
   --blue-border: #0000ff;
   --blue-inner: #bdbaff;
-  --blue-background: #bdbaff;
-  --dark-green: #63cf73;
-  --dark-green-border: #008a31;
-  --dark-green-inner: #9cefbd;
-  --dark-green-background: #9cefbd;
-  --light-green: #ceff8c;
-  --light-green-border: #8cff00;
-  --light-green-inner: #deffbd;
-  --light-green-background: #deffbd;
-  --slate-blue: #73cfff;
-  --slate-blue-border: #1075ff;
-  --slate-blue-inner: #bddfff;
-  --slate-blue-background: #bddfff;
-  --light-blue: #00cfff;
-  --light-blue-border: #00cfff;
-  --light-blue-inner: #adffff;
-  --light-blue-background: #adffff;
-  --ocean-blue: #00ffce;
-  --ocean-blue-border: #00ffce;
-  --ocean-blue-inner: #ceffef;
-  --ocean-blue-background: #ceffef;
   --green: #adffad;
   --green-border: #21df21;
   --green-inner: #adffad;
-  --green-background: #adffad;
+  --red: #ff7573;
+  --red-border: #ff7573;
+  --red-inner: #ffbace;
+  --orange: #ff6500;
+  --orange-border: #ff6500;
+  --orange-inner: #decfbd;
+  --peach: #ffba8c;
+  --peach-border: #ffaa8c;
+  --peach-inner: #ffefde;
+  --fuchsia: #ff55ef;
+  --fuchsia-border: #ff00ce;
+  --fuchsia-inner: #ffbaff;
+  --brown: #ad7542;
+  --brown-border: #9c3000;
+  --brown-inner: #deba9c;
+  --indigo: #bd9aef;
+  --indigo-border: #6300ff;
+  --indigo-inner: #debaff;
+  --dark-green: #63cf73;
+  --dark-green-border: #008a31;
+  --dark-green-inner: #9cefbd;
+  --light-green: #ceff8c;
+  --light-green-border: #8cff00;
+  --light-green-inner: #deffbd;
+  --slate-blue: #73cfff;
+  --slate-blue-border: #1075ff;
+  --slate-blue-inner: #bddfff;
+  --light-blue: #00cfff;
+  --light-blue-border: #00cfff;
+  --light-blue-inner: #adffff;
+  --ocean-blue: #00ffce;
+  --ocean-blue-border: #00ffce;
+  --ocean-blue-inner: #ceffef;
+  /* uisng fluid type scale calculator from utopia.fyi calculator
+     link: https://utopia.fyi/type/calculator/?c=320,16,1.2,2560,18,1.2,6,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12
+  */
+  --font-step--2: clamp(0.6944rem, 0.682rem + 0.062vw, 0.7813rem);
+  --font-step--1: clamp(0.8333rem, 0.8185rem + 0.0744vw, 0.9375rem);
+  --font-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
+  --font-step-1: clamp(1.2rem, 1.1786rem + 0.1071vw, 1.35rem);
+  --font-step-2: clamp(1.44rem, 1.4143rem + 0.1286vw, 1.62rem);
+  --font-step-3: clamp(1.728rem, 1.6971rem + 0.1543vw, 1.944rem);
+  --font-step-4: clamp(2.0736rem, 2.0366rem + 0.1851vw, 2.3328rem);
+  --font-step-5: clamp(2.4883rem, 2.4439rem + 0.2222vw, 2.7994rem);
+  --font-step-6: clamp(2.986rem, 2.9327rem + 0.2666vw, 3.3592rem);
 }
 
-@media (prefers-reduced-motion) {
-  *, *::before, *::after {
-    animation-duration: 0s !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
-}
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -140,6 +136,18 @@ img, picture, video {
   object-fit: cover;
 }
 
+@media (prefers-reduced-motion) {
+  *, *::before, *::after {
+    animation-duration: 0s !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* The lower layer changes that aren't in the base.
+   While they can be class-based, some are element-based changes.
+   This includes also farly basic changes and adjustments for example
+   buttons, tables, etc.
+*/
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -162,6 +170,7 @@ th {
   background: var(--light-shadow);
 }
 
+/* Using fluid web typography */
 .font-thin {
   font-weight: 100;
 }
@@ -189,7 +198,39 @@ th {
 .font-black {
   font-weight: 900;
 }
+.font-extrablack {
+  font-weight: 950;
+}
 
+h1, .size-1 {
+  font-size: var(--font-step-6);
+}
+
+h2, .size-2 {
+  font-size: var(--font-step-5);
+}
+
+h3, .size-3 {
+  font-size: var(--font-step-4);
+}
+
+h4, .size-4 {
+  font-size: var(--font-step-3);
+}
+
+h5, .size-5 {
+  font-size: var(--font-step-2);
+}
+
+h6, .size-6 {
+  font-size: var(--font-step-1);
+}
+
+body, p, .size-7 {
+  font-size: var(--font-step-0);
+}
+
+/* The costome components */
 .box {
   border: 3px solid;
   border-radius: 10px;
@@ -198,192 +239,7 @@ th {
 .box:hover {
   transform: scale(1.05);
 }
-.box.is-pink {
-  background-color: var(--pink);
-  border-color: var(--pink-border);
-}
-.box.is-pink .inner-box {
-  background-color: var(--pink-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-red {
-  background-color: var(--red);
-  border-color: var(--red-border);
-}
-.box.is-red .inner-box {
-  background-color: var(--red-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-orange {
-  background-color: var(--orange);
-  border-color: var(--orange-border);
-}
-.box.is-orange .inner-box {
-  background-color: var(--orange-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-peach {
-  background-color: var(--peach);
-  border-color: var(--peach-border);
-}
-.box.is-peach .inner-box {
-  background-color: var(--peach-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-purple {
-  background-color: var(--purple);
-  border-color: var(--purple-border);
-}
-.box.is-purple .inner-box {
-  background-color: var(--purple-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-fuchsia {
-  background-color: var(--fuchsia);
-  border-color: var(--fuchsia-border);
-}
-.box.is-fuchsia .inner-box {
-  background-color: var(--fuchsia-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-brown {
-  background-color: var(--brown);
-  border-color: var(--brown-border);
-}
-.box.is-brown .inner-box {
-  background-color: var(--brown-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-yellow {
-  background-color: var(--yellow);
-  border-color: var(--yellow-border);
-}
-.box.is-yellow .inner-box {
-  background-color: var(--yellow-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-indigo {
-  background-color: var(--indigo);
-  border-color: var(--indigo-border);
-}
-.box.is-indigo .inner-box {
-  background-color: var(--indigo-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-blue {
-  background-color: var(--blue);
-  border-color: var(--blue-border);
-}
-.box.is-blue .inner-box {
-  background-color: var(--blue-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-dark-green {
-  background-color: var(--dark-green);
-  border-color: var(--dark-green-border);
-}
-.box.is-dark-green .inner-box {
-  background-color: var(--dark-green-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-light-green {
-  background-color: var(--light-green);
-  border-color: var(--light-green-border);
-}
-.box.is-light-green .inner-box {
-  background-color: var(--light-green-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-slate-blue {
-  background-color: var(--slate-blue);
-  border-color: var(--slate-blue-border);
-}
-.box.is-slate-blue .inner-box {
-  background-color: var(--slate-blue-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-light-blue {
-  background-color: var(--light-blue);
-  border-color: var(--light-blue-border);
-}
-.box.is-light-blue .inner-box {
-  background-color: var(--light-blue-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-ocean-blue {
-  background-color: var(--ocean-blue);
-  border-color: var(--ocean-blue-border);
-}
-.box.is-ocean-blue .inner-box {
-  background-color: var(--ocean-blue-inner);
-  border-radius: 15px;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px 15px;
-  padding: 5px;
-}
-.box.is-green {
-  background-color: var(--green);
-  border-color: var(--green-border);
-}
-.box.is-green .inner-box {
-  background-color: var(--green-inner);
+.box .inner-box {
   border-radius: 15px;
   max-width: 100%;
   max-height: 100%;
@@ -391,176 +247,7 @@ th {
   padding: 5px;
 }
 
-.bento {
-  display: grid;
-}
-.bento.gap-sm {
-  gap: 0.5rem;
-}
-.bento.gap-md {
-  gap: 1rem;
-}
-.bento.gap-lg {
-  gap: 2rem;
-}
-.bento.\32 x2 {
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  aspect-ratio: 2 / 2;
-  grid-auto-flow: dense;
-}
-.bento.\32 x2 * {
-  grid-row: span 1;
-  grid-column: span 1;
-}
-.bento.\33 x2 {
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  aspect-ratio: 3 / 2;
-  grid-auto-flow: dense;
-}
-.bento.\33 x2 * {
-  grid-row: span 1;
-  grid-column: span 1;
-}
-.bento.\34 x2 {
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  aspect-ratio: 4 / 2;
-  grid-auto-flow: dense;
-}
-.bento.\34 x2 * {
-  grid-row: span 1;
-  grid-column: span 1;
-}
-.bento.\32 x3 {
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  aspect-ratio: 2 / 3;
-  grid-auto-flow: dense;
-}
-.bento.\32 x3 * {
-  grid-row: span 1;
-  grid-column: span 1;
-}
-.bento.\33 x3 {
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  aspect-ratio: 3 / 3;
-  grid-auto-flow: dense;
-}
-.bento.\33 x3 * {
-  grid-row: span 1;
-  grid-column: span 1;
-}
-.bento.\34 x3 {
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  aspect-ratio: 4 / 3;
-  grid-auto-flow: dense;
-}
-.bento.\34 x3 * {
-  grid-row: span 1;
-  grid-column: span 1;
-}
-.bento.\32 x4 {
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  aspect-ratio: 2 / 4;
-  grid-auto-flow: dense;
-}
-.bento.\32 x4 * {
-  grid-row: span 1;
-  grid-column: span 1;
-}
-.bento.\33 x4 {
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  aspect-ratio: 3 / 4;
-  grid-auto-flow: dense;
-}
-.bento.\33 x4 * {
-  grid-row: span 1;
-  grid-column: span 1;
-}
-.bento.\34 x4 {
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  aspect-ratio: 4 / 4;
-  grid-auto-flow: dense;
-}
-.bento.\34 x4 * {
-  grid-row: span 1;
-  grid-column: span 1;
-}
-.bento .part.\31 x1 {
-  grid-row: span 1;
-  grid-column: span 1;
-}
-.bento .part.\32 x1 {
-  grid-row: span 2;
-  grid-column: span 1;
-}
-.bento .part.\33 x1 {
-  grid-row: span 3;
-  grid-column: span 1;
-}
-.bento .part.\34 x1 {
-  grid-row: span 4;
-  grid-column: span 1;
-}
-.bento .part.\31 x2 {
-  grid-row: span 1;
-  grid-column: span 2;
-}
-.bento .part.\32 x2 {
-  grid-row: span 2;
-  grid-column: span 2;
-}
-.bento .part.\33 x2 {
-  grid-row: span 3;
-  grid-column: span 2;
-}
-.bento .part.\34 x2 {
-  grid-row: span 4;
-  grid-column: span 2;
-}
-.bento .part.\31 x3 {
-  grid-row: span 1;
-  grid-column: span 3;
-}
-.bento .part.\32 x3 {
-  grid-row: span 2;
-  grid-column: span 3;
-}
-.bento .part.\33 x3 {
-  grid-row: span 3;
-  grid-column: span 3;
-}
-.bento .part.\34 x3 {
-  grid-row: span 4;
-  grid-column: span 3;
-}
-.bento .part.\31 x4 {
-  grid-row: span 1;
-  grid-column: span 4;
-}
-.bento .part.\32 x4 {
-  grid-row: span 2;
-  grid-column: span 4;
-}
-.bento .part.\33 x4 {
-  grid-row: span 3;
-  grid-column: span 4;
-}
-.bento .part.\34 x4 {
-  grid-row: span 4;
-  grid-column: span 4;
-}
-.bento.no-aspect-rato {
-  aspect-ratio: auto;
-}
-
+/* Some utility stuff */
 .shadow-sm {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px -2px rgba(0, 0, 0, 0.2);
 }

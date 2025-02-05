@@ -1,0 +1,44 @@
+// the base or variables
+@mixin color($name, $color, $border, $inner) {
+  --#{$name}: #{$color};
+  --#{$name}-border: #{$border};
+  --#{$name}-inner: #{$inner};
+}
+
+:root {
+  --background: #ececec;
+  --foreground: #121212;
+  --light-shadow: #0001;
+
+  @include color("yellow", #ffff73, #ffdf00, #ffffce);
+  @include color("pink", #ff65ad, #ff0063, #ffefff);
+  @include color("purple", #ef8aff, #ce00ff, #ffcfff);
+  @include color("blue", #8c9aff, #0000ff, #bdbaff);
+  @include color("green", #adffad, #21df21, #adffad);
+  @include color("red", #ff7573, #ff7573, #ffbace);
+  @include color("orange", #ff6500, #ff6500, #decfbd);
+  
+  @include color("peach", #ffba8c, #ffaa8c, #ffefde);
+  @include color("fuchsia", #ff55ef, #ff00ce, #ffbaff);
+  @include color("brown", #ad7542, #9c3000, #deba9c);
+  @include color("indigo", #bd9aef, #6300ff, #debaff);
+  @include color("dark-green", #63cf73, #008a31, #9cefbd);
+  @include color("light-green", #ceff8c, #8cff00, #deffbd);
+  @include color("slate-blue", #73cfff, #1075ff, #bddfff);
+  @include color("light-blue", #00cfff, #00cfff, #adffff);
+  @include color("ocean-blue", #00ffce, #00ffce, #ceffef);
+
+  /* uisng fluid type scale calculator from utopia.fyi calculator
+     link: https://utopia.fyi/type/calculator/?c=320,16,1.2,2560,18,1.2,6,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12
+  */
+  --font-step--2: clamp(0.6944rem, 0.682rem + 0.062vw, 0.7813rem);
+  --font-step--1: clamp(0.8333rem, 0.8185rem + 0.0744vw, 0.9375rem);
+  --font-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
+  --font-step-1: clamp(1.2rem, 1.1786rem + 0.1071vw, 1.35rem);
+  --font-step-2: clamp(1.44rem, 1.4143rem + 0.1286vw, 1.62rem);
+  --font-step-3: clamp(1.728rem, 1.6971rem + 0.1543vw, 1.944rem);
+  --font-step-4: clamp(2.0736rem, 2.0366rem + 0.1851vw, 2.3328rem);
+  --font-step-5: clamp(2.4883rem, 2.4439rem + 0.2222vw, 2.7994rem);
+  --font-step-6: clamp(2.986rem, 2.9327rem + 0.2666vw, 3.3592rem);
+}
+
