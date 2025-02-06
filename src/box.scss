@@ -1,19 +1,15 @@
 // boxes, boxes, boxes, I love boxes
+@import "base.scss";
 
 .box {
   border: 3px solid;
   border-radius: 10px;
   padding: 5px;
 
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  .inner-box {
-    border-radius: 15px;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 10px 15px;
-    padding: 5px;
+  @each $colour in $colours {
+    &.is-#{$colour} {
+      background-color: var(--#{$colour}-background);
+      border-color: var(--#{$colour}-border);
+    }
   }
 }

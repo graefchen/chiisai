@@ -1,44 +1,32 @@
+// some basic global varibales that should be useful
+$colours: "yellow", "pink", "purple", "blue", "green", "red", "normal", "brown";
+
 // the base or variables
-@mixin color($name, $color, $border, $inner) {
-  --#{$name}: #{$color};
+@mixin color($name, $color, $border, $foreground) {
+  --#{$name}-background: #{$color};
   --#{$name}-border: #{$border};
-  --#{$name}-inner: #{$inner};
+  --#{$name}-foreground: #{$foreground};
 }
 
 :root {
-  --background: #ececec;
-  --foreground: #121212;
-  --light-shadow: #0001;
+  @include color("yellow", #ffff00, #ffaa21, #ffaa21);
+  @include color("pink", #ff9aad, #ff00ce, #ff00ce);
+  @include color("purple", #bd9aef, #520073, #520073);
+  @include color("blue", #bddfff, #1075ff, #1075ff);
+  @include color("green", #adffad, #21df21, #21df21);
+  @include color("red", #ff7573, #ff0000, #ff0000);
+  @include color("normal", #ececec, #484848, #121212);
+  @include color("brown", #ceaa73, #734531, #734531);
 
-  @include color("yellow", #ffff73, #ffdf00, #ffffce);
-  @include color("pink", #ff65ad, #ff0063, #ffefff);
-  @include color("purple", #ef8aff, #ce00ff, #ffcfff);
-  @include color("blue", #8c9aff, #0000ff, #bdbaff);
-  @include color("green", #adffad, #21df21, #adffad);
-  @include color("red", #ff7573, #ff7573, #ffbace);
-  @include color("orange", #ff6500, #ff6500, #decfbd);
-  
-  @include color("peach", #ffba8c, #ffaa8c, #ffefde);
-  @include color("fuchsia", #ff55ef, #ff00ce, #ffbaff);
-  @include color("brown", #ad7542, #9c3000, #deba9c);
-  @include color("indigo", #bd9aef, #6300ff, #debaff);
-  @include color("dark-green", #63cf73, #008a31, #9cefbd);
-  @include color("light-green", #ceff8c, #8cff00, #deffbd);
-  @include color("slate-blue", #73cfff, #1075ff, #bddfff);
-  @include color("light-blue", #00cfff, #00cfff, #adffff);
-  @include color("ocean-blue", #00ffce, #00ffce, #ceffef);
-
-  /* uisng fluid type scale calculator from utopia.fyi calculator
-     link: https://utopia.fyi/type/calculator/?c=320,16,1.2,2560,18,1.2,6,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12
+  /* using fluid type scale calculator from utopia.fyi calculator
+     link: https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
   */
-  --font-step--2: clamp(0.6944rem, 0.682rem + 0.062vw, 0.7813rem);
-  --font-step--1: clamp(0.8333rem, 0.8185rem + 0.0744vw, 0.9375rem);
+  --font-step--1: clamp(0.7956rem, 0.8387rem + -0.0269vw, 0.8333rem);
   --font-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
-  --font-step-1: clamp(1.2rem, 1.1786rem + 0.1071vw, 1.35rem);
-  --font-step-2: clamp(1.44rem, 1.4143rem + 0.1286vw, 1.62rem);
-  --font-step-3: clamp(1.728rem, 1.6971rem + 0.1543vw, 1.944rem);
-  --font-step-4: clamp(2.0736rem, 2.0366rem + 0.1851vw, 2.3328rem);
-  --font-step-5: clamp(2.4883rem, 2.4439rem + 0.2222vw, 2.7994rem);
-  --font-step-6: clamp(2.986rem, 2.9327rem + 0.2666vw, 3.3592rem);
+  --font-step-1: clamp(1.2rem, 1.1442rem + 0.2791vw, 1.5908rem);
+  --font-step-2: clamp(1.44rem, 1.3244rem + 0.5781vw, 2.2493rem);
+  --font-step-3: clamp(1.728rem, 1.5205rem + 1.0375vw, 3.1805rem);
+  --font-step-4: clamp(2.0736rem, 1.7274rem + 1.7312vw, 4.4973rem);
+  --font-step-5: clamp(2.4883rem, 1.9353rem + 2.7649vw, 6.3592rem);
+  --font-step-6: clamp(2.986rem, 2.128rem + 4.2899vw, 8.9918rem);
 }
-

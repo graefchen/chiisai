@@ -1,3 +1,5 @@
+@import "base.scss";
+
 $shadow: rgba(0, 0, 0, 0.2);
 
 .shadow {
@@ -27,6 +29,23 @@ $shadow: rgba(0, 0, 0, 0.2);
   width: 100svw;
 }
 
-.normal-background {
-  background-color: var(--background);
+@each $colour in $colours {
+  .#{$colour}-background {
+    background-color: var(--#{$colour}-background);
+  }
+  .text-#{$colour} {
+    color: var(--#{$colour}-foreground);
+  }
+}
+
+/* The flow utility. Creates a top margin of the font height of the element.
+   inspired by the flow composition of the cube-biolerplate by set-studio:
+   https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main
+*/
+.flow > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+a:visited {
+  color: var(--purple-foreground);
 }

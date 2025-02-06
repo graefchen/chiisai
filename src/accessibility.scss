@@ -1,6 +1,6 @@
 // Accesability
 
-// disabling all animations, !important so that *nothing* overrides it
+/* disabling all animations, !important so that *nothing* overrides it */
 @media (prefers-reduced-motion) {
   *, *::before, *::after {
     animation-duration: 0s !important;
