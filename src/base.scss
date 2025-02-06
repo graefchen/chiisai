@@ -9,13 +9,13 @@ $colours: "yellow", "pink", "purple", "blue", "green", "red", "normal", "brown";
 }
 
 :root {
-  @include color("yellow", #ffff00, #ffaa21, #ffaa21);
+  @include color("yellow", #FFFFCE, #FFFF00, #FFFF00);
   @include color("pink", #ff9aad, #ff00ce, #ff00ce);
   @include color("purple", #bd9aef, #520073, #520073);
   @include color("blue", #bddfff, #1075ff, #1075ff);
   @include color("green", #adffad, #21df21, #21df21);
   @include color("red", #ff7573, #ff0000, #ff0000);
-  @include color("normal", #ececec, #484848, #121212);
+  @include color("normal", #ffffff, #484848, #121212);
   @include color("brown", #ceaa73, #734531, #734531);
 
   /* using fluid type scale calculator from utopia.fyi calculator

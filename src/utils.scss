@@ -33,7 +33,7 @@ $shadow: rgba(0, 0, 0, 0.2);
   .#{$colour}-background {
     background-color: var(--#{$colour}-background);
   }
-  .text-#{$colour} {
+  .#{$colour}-text {
     color: var(--#{$colour}-foreground);
   }
 }

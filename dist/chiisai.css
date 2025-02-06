@@ -7,9 +7,9 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
 :root {
-  --yellow-background: #ffff00;
-  --yellow-border: #ffaa21;
-  --yellow-foreground: #ffaa21;
+  --yellow-background: #FFFFCE;
+  --yellow-border: #FFFF00;
+  --yellow-foreground: #FFFF00;
   --pink-background: #ff9aad;
   --pink-border: #ff00ce;
   --pink-foreground: #ff00ce;
@@ -25,7 +25,7 @@
   --red-background: #ff7573;
   --red-border: #ff0000;
   --red-foreground: #ff0000;
-  --normal-background: #ececec;
+  --normal-background: #ffffff;
   --normal-border: #484848;
   --normal-foreground: #121212;
   --brown-background: #ceaa73;
@@ -209,9 +209,9 @@ small {
 
 /* The costome components */
 :root {
-  --yellow-background: #ffff00;
-  --yellow-border: #ffaa21;
-  --yellow-foreground: #ffaa21;
+  --yellow-background: #FFFFCE;
+  --yellow-border: #FFFF00;
+  --yellow-foreground: #FFFF00;
   --pink-background: #ff9aad;
   --pink-border: #ff00ce;
   --pink-foreground: #ff00ce;
@@ -227,7 +227,7 @@ small {
   --red-background: #ff7573;
   --red-border: #ff0000;
   --red-foreground: #ff0000;
-  --normal-background: #ececec;
+  --normal-background: #ffffff;
   --normal-border: #484848;
   --normal-foreground: #121212;
   --brown-background: #ceaa73;
@@ -286,9 +286,9 @@ small {
 
 /* Some utility stuff */
 :root {
-  --yellow-background: #ffff00;
-  --yellow-border: #ffaa21;
-  --yellow-foreground: #ffaa21;
+  --yellow-background: #FFFFCE;
+  --yellow-border: #FFFF00;
+  --yellow-foreground: #FFFF00;
   --pink-background: #ff9aad;
   --pink-border: #ff00ce;
   --pink-foreground: #ff00ce;
@@ -304,7 +304,7 @@ small {
   --red-background: #ff7573;
   --red-border: #ff0000;
   --red-foreground: #ff0000;
-  --normal-background: #ececec;
+  --normal-background: #ffffff;
   --normal-border: #484848;
   --normal-foreground: #121212;
   --brown-background: #ceaa73;
@@ -348,7 +348,7 @@ small {
   background-color: var(--yellow-background);
 }
 
-.text-yellow {
+.yellow-text {
   color: var(--yellow-foreground);
 }
 
@@ -356,7 +356,7 @@ small {
   background-color: var(--pink-background);
 }
 
-.text-pink {
+.pink-text {
   color: var(--pink-foreground);
 }
 
@@ -364,7 +364,7 @@ small {
   background-color: var(--purple-background);
 }
 
-.text-purple {
+.purple-text {
   color: var(--purple-foreground);
 }
 
@@ -372,7 +372,7 @@ small {
   background-color: var(--blue-background);
 }
 
-.text-blue {
+.blue-text {
   color: var(--blue-foreground);
 }
 
@@ -380,7 +380,7 @@ small {
   background-color: var(--green-background);
 }
 
-.text-green {
+.green-text {
   color: var(--green-foreground);
 }
 
@@ -388,7 +388,7 @@ small {
   background-color: var(--red-background);
 }
 
-.text-red {
+.red-text {
   color: var(--red-foreground);
 }
 
@@ -396,7 +396,7 @@ small {
   background-color: var(--normal-background);
 }
 
-.text-normal {
+.normal-text {
   color: var(--normal-foreground);
 }
 
@@ -404,7 +404,7 @@ small {
   background-color: var(--brown-background);
 }
 
-.text-brown {
+.brown-text {
   color: var(--brown-foreground);
 }
 
