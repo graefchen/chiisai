@@ -1,23 +1,4 @@
-// some basic global varibales that should be useful
-$colours: "yellow", "pink", "purple", "blue", "green", "red", "normal", "brown";
-
-// the base or variables
-@mixin color($name, $color, $border, $foreground) {
-  --#{$name}-background: #{$color};
-  --#{$name}-border: #{$border};
-  --#{$name}-foreground: #{$foreground};
-}
-
 :root {
-  @include color("yellow", #ffffce, #ffff00, #ffff00);
-  @include color("pink", #ff9aad, #ff00ce, #ff00ce);
-  @include color("purple", #bd9aef, #520073, #520073);
-  @include color("blue", #bddfff, #1075ff, #1075ff);
-  @include color("green", #adffad, #21df21, #21df21);
-  @include color("red", #ff7573, #ff0000, #ff0000);
-  @include color("normal", #ffffff, #484848, #121212);
-  @include color("brown", #ceaa73, #734531, #734531);
-
   /* using fluid type scale calculator from utopia.fyi calculator
      @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
   */

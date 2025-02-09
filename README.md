@@ -1,4 +1,4 @@
-<h1 align="center">🍱 chiisai</h1>
+<h1 align="center">chiisai</h1>
 <p align="center">
   <i>An modern, friendly, aesthetically minimalistic css framework</i>
 </p>
@@ -23,21 +23,20 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
 
 ## Plan:
 
-- heavily inspired by [Animal Crossing: New Leaf](https://en.wikipedia.org/wiki/Animal_Crossing:_New_Leaf)
+- heavily inspired by [Animal Crossing: New Leaf](https://en.wikipedia.org/wiki/Animal_Crossing:_New_Leaf)(?)
   - [New Leaf Gallery](https://nookipedia.com/wiki/Animal_Crossing:_New_Leaf/Gallery)
   - Colours: [ref](https://gist.github.com/Wunkolo/e0e1c8fef98dfcee806b)
   - [Nintendo 3DS Themes](https://nookipedia.com/wiki/Category:Nintendo_3DS_themes)
 - ~~use Humanist Sans-Serif Font~~
-  - [M PLUS Rounded 1c](https://fonts.google.com/specimen/M+PLUS+Rounded+1c?query=m+plus+)
   - [M PLUS 2](https://fonts.google.com/specimen/M+PLUS+2)
   - [webpage](https://mplusfonts.github.io)
 - clean buttons
 - **_rounded corners_** -> _friendly_
-- some easy bento box layouts [ref](https://bentogrids.com)
+- some easy bento box layouts [ref](https://bentogrids.com)(?)
   - <https://ibelick.com/blog/create-bento-grid-layouts>
-- (blurred) shadows
+- (blurred) shadows(?)
 - good looking animations(?)
-- animal crossing new leaf colours (only light mode)
+- animal crossing new leaf colours(?)
 - components & atomic modification
   - <https://smacss.com/book/categorizing/>
 - try to stay light to medium complexity

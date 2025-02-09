@@ -14,8 +14,6 @@
   margin: 0; // [1]
 }
 
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
-
 // [1] Prevening font size inflation.
 // [2] Set the font to the 'M PLUS Rounded 1c' and the 'M PLUS 2' font
 //     with a *generous* fallbach.
@@ -24,7 +22,6 @@ html {
   -webkit-text-size-adjust: none; // [1]
   text-size-adjust: none; // [1]
   font-family:
-    "M PLUS Rounded 1c",
     "M PLUS 2",
     system-ui,
     -apple-system,
