@@ -1,0 +1,11 @@
+@import "base.scss";
+
+@each $colour in $colours {
+  .background.is-#{$colour} {
+    background-color: var(--#{$colour}-background);
+  }
+
+  .text.is-#{$colour} {
+    color: var(--#{$colour}-foreground);
+  }
+}

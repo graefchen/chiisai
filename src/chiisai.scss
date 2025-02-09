@@ -12,13 +12,15 @@
 @use "accessibility.scss";
 
 /* The lower layer changes that aren't in the base.
-   While they can be class-based, some are element-based changes.
-   This includes also farly basic changes and adjustments for example
-   buttons, tables, etc.
+While they can be class-based, some are element-based changes.
+This includes also farly basic changes and adjustments for example
+buttons, tables, etc.
 */
+@use "colour.scss";
 @use "button.scss";
 @use "table.scss";
 @use "typography.scss";
+@use "composition.scss";
 
 /* The costome components */
 @use "box.scss";

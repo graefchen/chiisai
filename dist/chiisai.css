@@ -7,9 +7,9 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
 :root {
-  --yellow-background: #FFFFCE;
-  --yellow-border: #FFFF00;
-  --yellow-foreground: #FFFF00;
+  --yellow-background: #ffffce;
+  --yellow-border: #ffff00;
+  --yellow-foreground: #ffff00;
   --pink-background: #ff9aad;
   --pink-border: #ff00ce;
   --pink-foreground: #ff00ce;
@@ -28,20 +28,30 @@
   --normal-background: #ffffff;
   --normal-border: #484848;
   --normal-foreground: #121212;
-  --brown-background: #ceaa73;
+  --brown-background: #ffcfad;
   --brown-border: #734531;
   --brown-foreground: #734531;
   /* using fluid type scale calculator from utopia.fyi calculator
-     link: https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+     @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
   */
-  --font-step--1: clamp(0.7956rem, 0.8387rem + -0.0269vw, 0.8333rem);
-  --font-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
-  --font-step-1: clamp(1.2rem, 1.1442rem + 0.2791vw, 1.5908rem);
-  --font-step-2: clamp(1.44rem, 1.3244rem + 0.5781vw, 2.2493rem);
-  --font-step-3: clamp(1.728rem, 1.5205rem + 1.0375vw, 3.1805rem);
-  --font-step-4: clamp(2.0736rem, 1.7274rem + 1.7312vw, 4.4973rem);
-  --font-step-5: clamp(2.4883rem, 1.9353rem + 2.7649vw, 6.3592rem);
-  --font-step-6: clamp(2.986rem, 2.128rem + 4.2899vw, 8.9918rem);
+  --size-step--1: clamp(0.7956rem, 0.8387rem + -0.0269vw, 0.8333rem);
+  --size-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
+  --size-step-1: clamp(1.2rem, 1.1442rem + 0.2791vw, 1.5908rem);
+  --size-step-2: clamp(1.44rem, 1.3244rem + 0.5781vw, 2.2493rem);
+  --size-step-3: clamp(1.728rem, 1.5205rem + 1.0375vw, 3.1805rem);
+  --size-step-4: clamp(2.0736rem, 1.7274rem + 1.7312vw, 4.4973rem);
+  --size-step-5: clamp(2.4883rem, 1.9353rem + 2.7649vw, 6.3592rem);
+  --size-step-6: clamp(2.986rem, 2.128rem + 4.2899vw, 8.9918rem);
+  /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.5,1.5|2|3|4,s-l|l-2xl&g=s,l,xl,12 */
+  --space-3xs-2xs: clamp(0.5rem, 0.4911rem + 0.0446vw, 0.5625rem);
+  --space-2xs-xs: clamp(0.5rem, 0.4464rem + 0.2679vw, 0.875rem);
+  --space-xs-s: clamp(0.75rem, 0.6964rem + 0.2679vw, 1.125rem);
+  --space-s-m: clamp(1rem, 0.9018rem + 0.4911vw, 1.6875rem);
+  --space-m-l: clamp(1.5rem, 1.3929rem + 0.5357vw, 2.25rem);
+  --space-l-xl: clamp(2rem, 1.8036rem + 0.9821vw, 3.375rem);
+  --space-xl-2xl: clamp(3rem, 2.7857rem + 1.0714vw, 4.5rem);
+  --space-s-l: clamp(1rem, 0.8214rem + 0.8929vw, 2.25rem);
+  --space-l-2xl: clamp(2rem, 1.6429rem + 1.7857vw, 4.5rem);
 }
 
 *, *::before, *::after {
@@ -61,6 +71,7 @@ html {
 
 ul[role=list], ol[role=list] {
   list-style: none;
+  padding: 0px;
 }
 
 body {
@@ -108,6 +119,10 @@ img, picture, video {
   object-fit: cover;
 }
 
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
 /* disabling all animations, !important so that *nothing* overrides it */
 @media (prefers-reduced-motion) {
   *, *::before, *::after {
@@ -117,10 +132,122 @@ img, picture, video {
   }
 }
 /* The lower layer changes that aren't in the base.
-   While they can be class-based, some are element-based changes.
-   This includes also farly basic changes and adjustments for example
-   buttons, tables, etc.
+While they can be class-based, some are element-based changes.
+This includes also farly basic changes and adjustments for example
+buttons, tables, etc.
 */
+:root {
+  --yellow-background: #ffffce;
+  --yellow-border: #ffff00;
+  --yellow-foreground: #ffff00;
+  --pink-background: #ff9aad;
+  --pink-border: #ff00ce;
+  --pink-foreground: #ff00ce;
+  --purple-background: #bd9aef;
+  --purple-border: #520073;
+  --purple-foreground: #520073;
+  --blue-background: #bddfff;
+  --blue-border: #1075ff;
+  --blue-foreground: #1075ff;
+  --green-background: #adffad;
+  --green-border: #21df21;
+  --green-foreground: #21df21;
+  --red-background: #ff7573;
+  --red-border: #ff0000;
+  --red-foreground: #ff0000;
+  --normal-background: #ffffff;
+  --normal-border: #484848;
+  --normal-foreground: #121212;
+  --brown-background: #ffcfad;
+  --brown-border: #734531;
+  --brown-foreground: #734531;
+  /* using fluid type scale calculator from utopia.fyi calculator
+     @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+  */
+  --size-step--1: clamp(0.7956rem, 0.8387rem + -0.0269vw, 0.8333rem);
+  --size-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
+  --size-step-1: clamp(1.2rem, 1.1442rem + 0.2791vw, 1.5908rem);
+  --size-step-2: clamp(1.44rem, 1.3244rem + 0.5781vw, 2.2493rem);
+  --size-step-3: clamp(1.728rem, 1.5205rem + 1.0375vw, 3.1805rem);
+  --size-step-4: clamp(2.0736rem, 1.7274rem + 1.7312vw, 4.4973rem);
+  --size-step-5: clamp(2.4883rem, 1.9353rem + 2.7649vw, 6.3592rem);
+  --size-step-6: clamp(2.986rem, 2.128rem + 4.2899vw, 8.9918rem);
+  /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.5,1.5|2|3|4,s-l|l-2xl&g=s,l,xl,12 */
+  --space-3xs-2xs: clamp(0.5rem, 0.4911rem + 0.0446vw, 0.5625rem);
+  --space-2xs-xs: clamp(0.5rem, 0.4464rem + 0.2679vw, 0.875rem);
+  --space-xs-s: clamp(0.75rem, 0.6964rem + 0.2679vw, 1.125rem);
+  --space-s-m: clamp(1rem, 0.9018rem + 0.4911vw, 1.6875rem);
+  --space-m-l: clamp(1.5rem, 1.3929rem + 0.5357vw, 2.25rem);
+  --space-l-xl: clamp(2rem, 1.8036rem + 0.9821vw, 3.375rem);
+  --space-xl-2xl: clamp(3rem, 2.7857rem + 1.0714vw, 4.5rem);
+  --space-s-l: clamp(1rem, 0.8214rem + 0.8929vw, 2.25rem);
+  --space-l-2xl: clamp(2rem, 1.6429rem + 1.7857vw, 4.5rem);
+}
+
+.background.is-yellow {
+  background-color: var(--yellow-background);
+}
+
+.text.is-yellow {
+  color: var(--yellow-foreground);
+}
+
+.background.is-pink {
+  background-color: var(--pink-background);
+}
+
+.text.is-pink {
+  color: var(--pink-foreground);
+}
+
+.background.is-purple {
+  background-color: var(--purple-background);
+}
+
+.text.is-purple {
+  color: var(--purple-foreground);
+}
+
+.background.is-blue {
+  background-color: var(--blue-background);
+}
+
+.text.is-blue {
+  color: var(--blue-foreground);
+}
+
+.background.is-green {
+  background-color: var(--green-background);
+}
+
+.text.is-green {
+  color: var(--green-foreground);
+}
+
+.background.is-red {
+  background-color: var(--red-background);
+}
+
+.text.is-red {
+  color: var(--red-foreground);
+}
+
+.background.is-normal {
+  background-color: var(--normal-background);
+}
+
+.text.is-normal {
+  color: var(--normal-foreground);
+}
+
+.background.is-brown {
+  background-color: var(--brown-background);
+}
+
+.text.is-brown {
+  color: var(--brown-foreground);
+}
+
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -176,42 +303,62 @@ th {
 }
 
 h1 {
-  font-size: var(--font-step-6);
+  font-size: var(--size-step-6);
 }
 
 h2 {
-  font-size: var(--font-step-5);
+  font-size: var(--size-step-5);
 }
 
 h3 {
-  font-size: var(--font-step-4);
+  font-size: var(--size-step-4);
 }
 
 h4 {
-  font-size: var(--font-step-3);
+  font-size: var(--size-step-3);
 }
 
 h5 {
-  font-size: var(--font-step-2);
+  font-size: var(--size-step-2);
 }
 
 h6 {
-  font-size: var(--font-step-1);
+  font-size: var(--size-step-1);
 }
 
 body, p, blockquote, code {
-  font-size: var(--font-step-0);
+  font-size: var(--size-step-0);
 }
 
 small {
-  font-size: var(--font-step-1);
+  font-size: var(--size-step-1);
+}
+
+p, li, blockquote:not([class]) {
+  max-width: 50ch;
+}
+
+h1, h2, h3 {
+  max-width: 20ch;
+}
+
+/* some cool composition */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-placement, autofill), minmax(var(--grid-min-item-size, 16rem), 1fr));
+  gap: var(--gutter, var(--space-s-l));
+}
+
+.grid[data-layout="50-50"] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 50vw, 26rem);
 }
 
 /* The costome components */
 :root {
-  --yellow-background: #FFFFCE;
-  --yellow-border: #FFFF00;
-  --yellow-foreground: #FFFF00;
+  --yellow-background: #ffffce;
+  --yellow-border: #ffff00;
+  --yellow-foreground: #ffff00;
   --pink-background: #ff9aad;
   --pink-border: #ff00ce;
   --pink-foreground: #ff00ce;
@@ -230,20 +377,30 @@ small {
   --normal-background: #ffffff;
   --normal-border: #484848;
   --normal-foreground: #121212;
-  --brown-background: #ceaa73;
+  --brown-background: #ffcfad;
   --brown-border: #734531;
   --brown-foreground: #734531;
   /* using fluid type scale calculator from utopia.fyi calculator
-     link: https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+     @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
   */
-  --font-step--1: clamp(0.7956rem, 0.8387rem + -0.0269vw, 0.8333rem);
-  --font-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
-  --font-step-1: clamp(1.2rem, 1.1442rem + 0.2791vw, 1.5908rem);
-  --font-step-2: clamp(1.44rem, 1.3244rem + 0.5781vw, 2.2493rem);
-  --font-step-3: clamp(1.728rem, 1.5205rem + 1.0375vw, 3.1805rem);
-  --font-step-4: clamp(2.0736rem, 1.7274rem + 1.7312vw, 4.4973rem);
-  --font-step-5: clamp(2.4883rem, 1.9353rem + 2.7649vw, 6.3592rem);
-  --font-step-6: clamp(2.986rem, 2.128rem + 4.2899vw, 8.9918rem);
+  --size-step--1: clamp(0.7956rem, 0.8387rem + -0.0269vw, 0.8333rem);
+  --size-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
+  --size-step-1: clamp(1.2rem, 1.1442rem + 0.2791vw, 1.5908rem);
+  --size-step-2: clamp(1.44rem, 1.3244rem + 0.5781vw, 2.2493rem);
+  --size-step-3: clamp(1.728rem, 1.5205rem + 1.0375vw, 3.1805rem);
+  --size-step-4: clamp(2.0736rem, 1.7274rem + 1.7312vw, 4.4973rem);
+  --size-step-5: clamp(2.4883rem, 1.9353rem + 2.7649vw, 6.3592rem);
+  --size-step-6: clamp(2.986rem, 2.128rem + 4.2899vw, 8.9918rem);
+  /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.5,1.5|2|3|4,s-l|l-2xl&g=s,l,xl,12 */
+  --space-3xs-2xs: clamp(0.5rem, 0.4911rem + 0.0446vw, 0.5625rem);
+  --space-2xs-xs: clamp(0.5rem, 0.4464rem + 0.2679vw, 0.875rem);
+  --space-xs-s: clamp(0.75rem, 0.6964rem + 0.2679vw, 1.125rem);
+  --space-s-m: clamp(1rem, 0.9018rem + 0.4911vw, 1.6875rem);
+  --space-m-l: clamp(1.5rem, 1.3929rem + 0.5357vw, 2.25rem);
+  --space-l-xl: clamp(2rem, 1.8036rem + 0.9821vw, 3.375rem);
+  --space-xl-2xl: clamp(3rem, 2.7857rem + 1.0714vw, 4.5rem);
+  --space-s-l: clamp(1rem, 0.8214rem + 0.8929vw, 2.25rem);
+  --space-l-2xl: clamp(2rem, 1.6429rem + 1.7857vw, 4.5rem);
 }
 
 .box {
@@ -286,9 +443,9 @@ small {
 
 /* Some utility stuff */
 :root {
-  --yellow-background: #FFFFCE;
-  --yellow-border: #FFFF00;
-  --yellow-foreground: #FFFF00;
+  --yellow-background: #ffffce;
+  --yellow-border: #ffff00;
+  --yellow-foreground: #ffff00;
   --pink-background: #ff9aad;
   --pink-border: #ff00ce;
   --pink-foreground: #ff00ce;
@@ -307,36 +464,30 @@ small {
   --normal-background: #ffffff;
   --normal-border: #484848;
   --normal-foreground: #121212;
-  --brown-background: #ceaa73;
+  --brown-background: #ffcfad;
   --brown-border: #734531;
   --brown-foreground: #734531;
   /* using fluid type scale calculator from utopia.fyi calculator
-     link: https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+     @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
   */
-  --font-step--1: clamp(0.7956rem, 0.8387rem + -0.0269vw, 0.8333rem);
-  --font-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
-  --font-step-1: clamp(1.2rem, 1.1442rem + 0.2791vw, 1.5908rem);
-  --font-step-2: clamp(1.44rem, 1.3244rem + 0.5781vw, 2.2493rem);
-  --font-step-3: clamp(1.728rem, 1.5205rem + 1.0375vw, 3.1805rem);
-  --font-step-4: clamp(2.0736rem, 1.7274rem + 1.7312vw, 4.4973rem);
-  --font-step-5: clamp(2.4883rem, 1.9353rem + 2.7649vw, 6.3592rem);
-  --font-step-6: clamp(2.986rem, 2.128rem + 4.2899vw, 8.9918rem);
-}
-
-.shadow-sm {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px -2px rgba(0, 0, 0, 0.2);
-}
-.shadow-md {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px -4px rgba(0, 0, 0, 0.2);
-}
-.shadow-lg {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 9px 30px -6px rgba(0, 0, 0, 0.2);
-}
-.shadow-inner {
-  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-}
-.shadow-none {
-  box-shadow: 0 0 #000;
+  --size-step--1: clamp(0.7956rem, 0.8387rem + -0.0269vw, 0.8333rem);
+  --size-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
+  --size-step-1: clamp(1.2rem, 1.1442rem + 0.2791vw, 1.5908rem);
+  --size-step-2: clamp(1.44rem, 1.3244rem + 0.5781vw, 2.2493rem);
+  --size-step-3: clamp(1.728rem, 1.5205rem + 1.0375vw, 3.1805rem);
+  --size-step-4: clamp(2.0736rem, 1.7274rem + 1.7312vw, 4.4973rem);
+  --size-step-5: clamp(2.4883rem, 1.9353rem + 2.7649vw, 6.3592rem);
+  --size-step-6: clamp(2.986rem, 2.128rem + 4.2899vw, 8.9918rem);
+  /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.5,1.5|2|3|4,s-l|l-2xl&g=s,l,xl,12 */
+  --space-3xs-2xs: clamp(0.5rem, 0.4911rem + 0.0446vw, 0.5625rem);
+  --space-2xs-xs: clamp(0.5rem, 0.4464rem + 0.2679vw, 0.875rem);
+  --space-xs-s: clamp(0.75rem, 0.6964rem + 0.2679vw, 1.125rem);
+  --space-s-m: clamp(1rem, 0.9018rem + 0.4911vw, 1.6875rem);
+  --space-m-l: clamp(1.5rem, 1.3929rem + 0.5357vw, 2.25rem);
+  --space-l-xl: clamp(2rem, 1.8036rem + 0.9821vw, 3.375rem);
+  --space-xl-2xl: clamp(3rem, 2.7857rem + 1.0714vw, 4.5rem);
+  --space-s-l: clamp(1rem, 0.8214rem + 0.8929vw, 2.25rem);
+  --space-l-2xl: clamp(2rem, 1.6429rem + 1.7857vw, 4.5rem);
 }
 
 .full-screen {
@@ -344,78 +495,21 @@ small {
   width: 100svw;
 }
 
-.yellow-background {
-  background-color: var(--yellow-background);
-}
-
-.yellow-text {
-  color: var(--yellow-foreground);
-}
-
-.pink-background {
-  background-color: var(--pink-background);
-}
-
-.pink-text {
-  color: var(--pink-foreground);
-}
-
-.purple-background {
-  background-color: var(--purple-background);
-}
-
-.purple-text {
-  color: var(--purple-foreground);
-}
-
-.blue-background {
-  background-color: var(--blue-background);
-}
-
-.blue-text {
-  color: var(--blue-foreground);
-}
-
-.green-background {
-  background-color: var(--green-background);
-}
-
-.green-text {
-  color: var(--green-foreground);
-}
-
-.red-background {
-  background-color: var(--red-background);
-}
-
-.red-text {
-  color: var(--red-foreground);
-}
-
-.normal-background {
-  background-color: var(--normal-background);
-}
-
-.normal-text {
-  color: var(--normal-foreground);
-}
-
-.brown-background {
-  background-color: var(--brown-background);
-}
-
-.brown-text {
-  color: var(--brown-foreground);
-}
-
 /* The flow utility. Creates a top margin of the font height of the element.
-   inspired by the flow composition of the cube-biolerplate by set-studio:
+   inspired by the flow composition of the cube-boilerplate by set-studio:
    https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main
 */
 .flow > * + * {
   margin-top: var(--flow-space, 1rem);
 }
 
-a:visited {
-  color: var(--purple-foreground);
+.region {
+  padding-top: var(--region-space, var(--space-l-2xl));
+  padding-bottom: var(--region-space, var(--space-l-2xl));
+}
+
+.wrapper {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 60rem;
 }

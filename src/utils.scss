@@ -1,51 +1,25 @@
 @import "base.scss";
 
-$shadow: rgba(0, 0, 0, 0.2);
-
-.shadow {
-  &-sm {
-    box-shadow: 0 2px 4px 0 $shadow, 0 3px 10px -2px $shadow;
-  }
-
-  &-md {
-    box-shadow: 0 4px 8px 0 $shadow, 0 6px 20px -4px $shadow;
-  }
-
-  &-lg {
-    box-shadow: 0 8px 16px 0 $shadow, 0 9px 30px -6px $shadow;
-  }
-
-  &-inner {
-    box-shadow: inset 0 2px 4px 0 $shadow;
-  }
-
-  &-none {
-    box-shadow: 0 0 #000;
-  }
-}
-
 .full-screen {
   height: 100svh;
   width: 100svw;
 }
 
-@each $colour in $colours {
-  .#{$colour}-background {
-    background-color: var(--#{$colour}-background);
-  }
-  .#{$colour}-text {
-    color: var(--#{$colour}-foreground);
-  }
-}
-
 /* The flow utility. Creates a top margin of the font height of the element.
-   inspired by the flow composition of the cube-biolerplate by set-studio:
+   inspired by the flow composition of the cube-boilerplate by set-studio:
    https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main
 */
 .flow > * + * {
   margin-top: var(--flow-space, 1rem);
 }
 
-a:visited {
-  color: var(--purple-foreground);
+.region {
+  padding-top: var(--region-space, var(--space-l-2xl));
+  padding-bottom: var(--region-space, var(--space-l-2xl));
+}
+
+.wrapper {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 60rem;
 }

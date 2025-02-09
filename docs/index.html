@@ -1,73 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🍱 chiisai</title>
-    <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./chiisai.min.css" />
-    <style>
-      body {
-        margin: 0 auto;
-        width: min(90%, 1820px);
-      }
-    </style>
-  </head>
 
-  <body class="normal-background flow">
-    <h1>🍱 chiisai</h1>
-    <h2>An modern, friendly, aesthetically minimalistic css framework</h2>
-    <h3>
-      With <strong class="font-extrabold">many</strong> cool things, based on
-      colours from the Video Game
-      <a href="https://en.wikipedia.org/wiki/Animal_Crossing:_New_Leaf"
-        >Animal Crossing: New Leaf</a
-      >
-    </h3>
-    <h4>
-      While mainly being classless, <i>chiisai</i> also uses many small usable
-      classes
-    </h4>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🍱 chiisai</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="./chiisai.min.css" />
+</head>
+
+<body class="background is-neutral wrapper">
+  <h1 class="region">🍱 chiisai</h1>
+  <h2 class="region">An modern, friendly, aesthetically minimalistic css framework</h2>
+  <h3 class="region">
+    With <strong class="font-extrabold">many</strong> cool things, based on
+    colours from the Video Game
+    <a class="text is-purple" href="https://en.wikipedia.org/wiki/Animal_Crossing:_New_Leaf">
+      Animal Crossing: New Leaf</a>
+  </h3>
+  <h4 class="region">
+    While mainly being classless, <i>chiisai</i> also uses many small usable
+    classes
+  </h4>
+  <div class="flow region">
     <h5>
       Like boxes in many different
       <strong class="font-extrabold">awesome</strong> colours, like:
     </h5>
-    <div class="flow">
-      <div>
-        <h5 class="box is-yellow">Yellow</h5>
-      </div>
-      <div>
-        <h5 class="box is-pink">Pink</h5>
-      </div>
-      <div>
-        <h5 class="box is-purple">Purple</h5>
-      </div>
-      <div>
-        <h5 class="box is-blue">Blue</h5>
-      </div>
-      <div>
-        <h5 class="box is-green">Green</h5>
-      </div>
-      <div>
-        <h5 class="box is-red">Red</h5>
-      </div>
-      <div>
-        <h5 class="box is-normal">Normal</h5>
-      </div>
-      <div>
-        <h5 class="box is-brown">Brown</h5>
-      </div>
-    </div>
+    <ul class="grid" data-layout="50-50" role="list">
+      <li class="box is-yellow">
+        <h5>Yellow</h5>
+      </li>
+      <li class="box is-pink">
+        <h5>Pink</h5>
+      </li>
+      <li class="box is-purple">
+        <h5>Purple</h5>
+      </li>
+      <li class="box is-blue">
+        <h5>Blue</h5>
+      </li>
+      <li class="box is-green">
+        <h5>Green</h5>
+      </li>
+      <li class="box is-red">
+        <h5>Red</h5>
+      </li>
+      <li class="box is-normal">
+        <h5>Normal</h5>
+      </li>
+      <li class="box is-brown">
+        <h5>Brown</h5>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div class="flow region">
     <h5>Or text in <em>different</em> colours, like:</h5>
-    <div class="flow">
-      <h6 class="yellow-text">Some Yellow Text</h6>
-      <h6 class="pink-text">Some Pink Text</h6>
-      <h6 class="purple-text">Some Purple Text</h6>
-      <h6 class="blue-text">Some Blue Text</h6>
-      <h6 class="green-text">Some Green Text</h6>
-      <h6 class="red-text">Some Red Text</h6>
-      <h6 class="normal-text">Some Normal Text</h6>
-      <h6 class="brown-text">Some Brown Text</h6>
-    </div>
-  </body>
+    <ul class="grid" data-layout="50-50" role="list">
+      <li>
+        <h5 class="text is-yellow">Yellow</h5>
+      </li>
+      <li>
+        <h5 class="text is-pink">Pink</h5>
+      </li>
+      <li>
+        <h5 class="text is-purple">Purple</h5>
+      </li>
+      <li>
+        <h5 class="text is-blue">Blue</h5>
+      </li>
+      <li>
+        <h5 class="text is-green">Green</h5>
+      </li>
+      <li>
+        <h5 class="text is-red">Red</h5>
+      </li>
+      <li>
+        <h5 class="text is-normal">Normal</h5>
+      </li>
+      <li>
+        <h5 class="text is-brown">Brown</h5>
+      </li>
+    </ul>
+  </div>
+</body>
+
 </html>
