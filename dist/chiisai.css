@@ -6,6 +6,9 @@
    style of the element.
 */
 :root {
+  --bg: #2a2a2a;
+  --fg: #ffffff;
+  --ac: #ffcad4;
   /* using fluid type scale calculator from utopia.fyi calculator
      @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
   */
@@ -41,7 +44,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  font-family: "M PLUS 2", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, Roboto, Ubuntu, "Helvetica Neue", sans-serif;
 }
 
 ul[role=list], ol[role=list] {
@@ -112,43 +115,12 @@ This includes also farly basic changes and adjustments for example
 buttons, tables, etc.
 */
 /* Using fluid web typography */
-.font-thin {
-  font-weight: 100;
-}
-.font-extralight {
-  font-weight: 200;
-}
-.font-light {
-  font-weight: 300;
-}
-.font-regular {
-  font-weight: 400;
-}
-.font-medium {
-  font-weight: 500;
-}
-.font-semibold {
-  font-weight: 600;
-}
-.font-bold {
-  font-weight: 700;
-}
-.font-extrabold {
-  font-weight: 800;
-}
-.font-black {
-  font-weight: 900;
-}
-.font-extrablack {
-  font-weight: 950;
+h1, h2, h3 {
+  max-width: 20ch;
 }
 
 p, li, blockquote:not([class]) {
   max-width: 50ch;
-}
-
-h1, h2, h3 {
-  max-width: 20ch;
 }
 
 h1 {
@@ -198,6 +170,9 @@ small {
 /* The costome components */
 /* Some utility stuff */
 :root {
+  --bg: #2a2a2a;
+  --fg: #ffffff;
+  --ac: #ffcad4;
   /* using fluid type scale calculator from utopia.fyi calculator
      @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
   */
@@ -221,12 +196,22 @@ small {
   --space-l-2xl: clamp(2rem, 1.6429rem + 1.7857vw, 4.5rem);
 }
 
+.full-screen {
+  width: 100%;
+  height: 100svh;
+}
+
+.center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 /* The flow utility. Creates a top margin of the font height of the element.
    inspired by the flow composition of the cube-boilerplate by set-studio:
-   https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main
-*/
+   https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main */
 .flow > * + * {
-  margin-top: var(--flow-space, 1rem);
+  margin-top: var(--flow-space, 1em);
 }
 
 .region {
@@ -238,4 +223,21 @@ small {
   margin-inline: auto;
   padding-inline: 1rem;
   max-width: 60rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+.fg-dark {
+  color: var(--bg);
+}
+
+.bg-accent {
+  background-color: var(--ac);
 }

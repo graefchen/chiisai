@@ -4,7 +4,7 @@
 </p>
 <hr>
 
-## Compile
+## compile
 
 ```nu
 # minified version
@@ -13,7 +13,14 @@ sass --no-source-map --style compressed src\chiisai.scss:dist\chiisai.min.css
 sass --no-source-map src\chiisai.scss:dist\chiisai.css
 ```
 
-## Inspiration's
+## todo
+
+- [ ] rewrite it, so that it resembles the first minimal version
+  - [ ] remove unneeded and unwanted classes (font-bold, etc.)
+  - [ ] rework the normalize
+  - [ ] rework the colour palette
+
+## inspiration's
 
 - https://nookipedia.com/wiki/Main_Page
 - [Hyperplexed - Websites Need More Mario UI](https://youtu.be/x872keruUWQ?si=6xeduMSppN0E1DlP)
@@ -21,7 +28,7 @@ sass --no-source-map src\chiisai.scss:dist\chiisai.css
 - [Be the Browser's Mentor, not its Micromanager with Andy Bell — SmashingConf Freiburg 2022](https://youtu.be/JqnMI1AXl6w?si=S_UtzEi9uznkdMHj)
 - [CUBE CSS](https://cube.fyi)
 
-## Plan:
+## plan
 
 - heavily inspired by [Animal Crossing: New Leaf](https://en.wikipedia.org/wiki/Animal_Crossing:_New_Leaf)(?)
   - [New Leaf Gallery](https://nookipedia.com/wiki/Animal_Crossing:_New_Leaf/Gallery)

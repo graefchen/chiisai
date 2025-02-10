@@ -2,21 +2,8 @@
 @use "sass:list";
 
 /* Using fluid web typography */
-
-.font {
-  &-thin       { font-weight: 100; }
-  &-extralight { font-weight: 200; }
-  &-light      { font-weight: 300; }
-  &-regular    { font-weight: 400; }
-  &-medium     { font-weight: 500; }
-  &-semibold   { font-weight: 600; }
-  &-bold       { font-weight: 700; }
-  &-extrabold  { font-weight: 800; }
-  &-black      { font-weight: 900; }
-  &-extrablack { font-weight: 950; }
-}
-p, li, blockquote:not([class]) { max-width: 50ch; }
 h1, h2, h3 { max-width: 20ch; }
+p, li, blockquote:not([class]) { max-width: 50ch; }
 h1 { font-size: var(--size-step-6); }
 h2 { font-size: var(--size-step-5); }
 h3 { font-size: var(--size-step-4); }
