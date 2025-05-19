@@ -2,7 +2,9 @@
 
 /* disabling all animations, !important so that *nothing* overrides it */
 @media (prefers-reduced-motion) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0s !important;
     transition: none !important;
     scroll-behavior: auto !important;

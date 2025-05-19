@@ -24,6 +24,15 @@ buttons, tables, etc.
 /* Some utility stuff */
 @use "utils.scss";
 
-body { background-color: var(--bg); color: var(--fg); }
-.fg-dark { color: var(--bg); }
-.bg-accent { background-color: var(--ac); }
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+.fg-dark {
+  color: var(--bg);
+}
+
+.bg-accent {
+  background-color: var(--ac);
+}
