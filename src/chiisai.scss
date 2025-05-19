@@ -1,27 +1,25 @@
 @charset "utf-8";
 
-/* The base of chiisa - the colours amd other important things
-   like the normalisation of the css style and then the accessibility ...
-   which (TODO:) needs a lot of work as it only has motion reducing
-   css acessability features.
-   many of these features diretly affect the styles as the change the
-   style of the element.
-*/
+// The base of chiisa - the colours amd other important things
+// like the normalisation of the css style and then the accessibility ...
+// which (TODO:) needs a lot of work as it only has motion reducing
+// css acessability features.
+// many of these features diretly affect the styles as the change the
+// style of the element.
 @use "base.scss";
 @use "normalize.scss";
 @use "accessibility.scss";
 
-/* The lower layer changes that aren't in the base.
-While they can be class-based, some are element-based changes.
-This includes also farly basic changes and adjustments for example
-buttons, tables, etc.
-*/
+// The lower layer changes that aren't in the base.
+// While they can be class-based, some are element-based changes.
+// This includes also farly basic changes and adjustments for example
+// buttons, tables, etc.
 @use "typography.scss";
 @use "composition.scss";
 
-/* The costome components */
+// The costome components
 
-/* Some utility stuff */
+// Some utility stuff
 @use "utils.scss";
 
 body {
