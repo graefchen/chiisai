@@ -1,0 +1,26 @@
+.full-screen
+  width: 100%
+  height: 100svh
+
+.center
+  align-items: center
+  display: flex
+  justify-content: center
+
+/* The flow utility. Creates a top margin of the font height of the element.
+   inspired by the flow composition of the cube-boilerplate by set-studio:
+   https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main */
+.flow > * + *
+  margin-top: var(--flow-space, 1em)
+
+.region
+  padding-top: var(--region-space, var(--space-l-2xl))
+  padding-bottom: var(--region-space, var(--space-l-2xl))
+
+.wrapper
+  margin-inline: auto
+  padding-inline: 1rem
+  max-width: 60rem
+
+.text-center
+  text-align: center
