@@ -1,4 +1,4 @@
-@charset "utf-8"
+@charset "utf-8";
 
 // The base of chiisa - the colours amd other important things
 // like the normalisation of the css style and then the accessibility ...
@@ -6,28 +6,31 @@
 // css acessability features.
 // many of these features diretly affect the styles as the change the
 // style of the element.
-@use "base.sass"
-@use "normalize.sass"
-@use "accessibility.sass"
+@use "base.scss";
+@use "normalize.scss";
+@use "accessibility.scss";
 
 // The lower layer changes that aren't in the base.
 // While they can be class-based, some are element-based changes.
 // This includes also farly basic changes and adjustments for example
 // buttons, tables, etc.
-@use "typography.sass"
-@use "composition.sass"
+@use "typography.scss";
+@use "composition.scss";
 
 // The costome components
 
 // Some utility stuff
-@use "utils.sass"
+@use "utils.scss";
 
-body
-  background-color: var(--bg)
-  color: var(--fg)
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+}
 
-.fg-dark
-  color: var(--bg)
+.fg-dark {
+  color: var(--bg);
+}
 
-.bg-accent
-  background-color: var(--ac)
+.bg-accent {
+  background-color: var(--ac);
+}

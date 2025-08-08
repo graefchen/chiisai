@@ -1,10 +1,17 @@
+/* The base of chiisa - the colours amd other important things
+   like the normalisation of the css style and then the accessibility ...
+   which (TODO:) needs a lot of work as it only has motion reducing
+   css acessability features.
+   many of these features diretly affect the styles as the change the
+   style of the element.
+*/
 :root {
   --bg: #2a2a2a;
   --fg: #ffffff;
   --ac: #ffcad4;
   /* using fluid type scale calculator from utopia.fyi calculator
-  * @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
-  * */
+     @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+  */
   --size-step--1: clamp(0.7956rem, 0.8387rem + -0.0269vw, 0.8333rem);
   --size-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
   --size-step-1: clamp(1.2rem, 1.1442rem + 0.2791vw, 1.5908rem);
@@ -25,9 +32,7 @@
   --space-l-2xl: clamp(2rem, 1.6429rem + 1.7857vw, 4.5rem);
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -42,8 +47,7 @@ html {
   font-family: system-ui, -apple-system, Roboto, Ubuntu, "Helvetica Neue", sans-serif;
 }
 
-ul[role=list],
-ol[role=list] {
+ul[role=list], ol[role=list] {
   list-style: none;
   padding: 0px;
 }
@@ -54,31 +58,15 @@ body {
   -webkit-font-smoothing: antialised;
 }
 
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-label {
+h1, h2, h3, h4, button, input, label {
   line-height: 1.1;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a {
+h1, h2, h3, h4, h5, h6, p, a {
   overflow-wrap: break-word;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   text-wrap: balance;
 }
 
@@ -87,10 +75,7 @@ a:not([href]) {
   color: currentColor;
 }
 
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
   font-family: inherit;
   font-size: inherit;
 }
@@ -103,54 +88,38 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
+img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
 
-img,
-picture,
-video {
+img, picture, video {
   object-fit: cover;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
   margin-block-end: 0;
 }
 
 /* disabling all animations, !important so that *nothing* overrides it */
 @media (prefers-reduced-motion) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0s !important;
     transition: none !important;
     scroll-behavior: auto !important;
   }
 }
+/* The lower layer changes that aren't in the base.
+While they can be class-based, some are element-based changes.
+This includes also farly basic changes and adjustments for example
+buttons, tables, etc.
+*/
 /* Using fluid web typography */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   max-width: 20ch;
 }
 
-p,
-li,
-blockquote:not([class]) {
+p, li, blockquote:not([class]) {
   max-width: 50ch;
 }
 
@@ -178,10 +147,7 @@ h6 {
   font-size: var(--size-step-1);
 }
 
-body,
-p,
-blockquote,
-code {
+body, p, blockquote, code {
   font-size: var(--size-step-0);
 }
 
@@ -201,6 +167,35 @@ small {
   --grid-min-item-size: clamp(16rem, 50vw, 26rem);
 }
 
+/* The costome components */
+/* Some utility stuff */
+:root {
+  --bg: #2a2a2a;
+  --fg: #ffffff;
+  --ac: #ffcad4;
+  /* using fluid type scale calculator from utopia.fyi calculator
+     @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+  */
+  --size-step--1: clamp(0.7956rem, 0.8387rem + -0.0269vw, 0.8333rem);
+  --size-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
+  --size-step-1: clamp(1.2rem, 1.1442rem + 0.2791vw, 1.5908rem);
+  --size-step-2: clamp(1.44rem, 1.3244rem + 0.5781vw, 2.2493rem);
+  --size-step-3: clamp(1.728rem, 1.5205rem + 1.0375vw, 3.1805rem);
+  --size-step-4: clamp(2.0736rem, 1.7274rem + 1.7312vw, 4.4973rem);
+  --size-step-5: clamp(2.4883rem, 1.9353rem + 2.7649vw, 6.3592rem);
+  --size-step-6: clamp(2.986rem, 2.128rem + 4.2899vw, 8.9918rem);
+  /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,2560,18,1.414,6,1,&s=0.75|0.5|0.5,1.5|2|3|4,s-l|l-2xl&g=s,l,xl,12 */
+  --space-3xs-2xs: clamp(0.5rem, 0.4911rem + 0.0446vw, 0.5625rem);
+  --space-2xs-xs: clamp(0.5rem, 0.4464rem + 0.2679vw, 0.875rem);
+  --space-xs-s: clamp(0.75rem, 0.6964rem + 0.2679vw, 1.125rem);
+  --space-s-m: clamp(1rem, 0.9018rem + 0.4911vw, 1.6875rem);
+  --space-m-l: clamp(1.5rem, 1.3929rem + 0.5357vw, 2.25rem);
+  --space-l-xl: clamp(2rem, 1.8036rem + 0.9821vw, 3.375rem);
+  --space-xl-2xl: clamp(3rem, 2.7857rem + 1.0714vw, 4.5rem);
+  --space-s-l: clamp(1rem, 0.8214rem + 0.8929vw, 2.25rem);
+  --space-l-2xl: clamp(2rem, 1.6429rem + 1.7857vw, 4.5rem);
+}
+
 .full-screen {
   width: 100%;
   height: 100svh;
@@ -213,8 +208,8 @@ small {
 }
 
 /* The flow utility. Creates a top margin of the font height of the element.
- * inspired by the flow composition of the cube-boilerplate by set-studio:
- * https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main */
+   inspired by the flow composition of the cube-boilerplate by set-studio:
+   https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main */
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
 }
