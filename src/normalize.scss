@@ -23,7 +23,12 @@ html {
   -moz-text-size-adjust: none; // [1]
   -webkit-text-size-adjust: none; // [1]
   text-size-adjust: none; // [1]
-  font-family: system-ui, -apple-system, Roboto, Ubuntu, "Helvetica Neue",
+  font-family:
+    system-ui,
+    -apple-system,
+    Roboto,
+    Ubuntu,
+    "Helvetica Neue",
     sans-serif; // [2]
 }
 
