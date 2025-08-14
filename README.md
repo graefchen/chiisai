@@ -6,11 +6,11 @@
 
 ## compile
 
-```nu
+```bash
 # minified version
-sass --no-source-map --style compressed src\chiisai.scss:dist\chiisai.min.css
+sass --no-source-map --style compressed src/chiisai.scss:dist/chiisai.min.css
 # normal version
-sass --no-source-map src\chiisai.scss:dist\chiisai.css
+sass --no-source-map src/chiisai.scss:dist/chiisai.css
 ```
 
 ## goal
@@ -41,36 +41,9 @@ The goal is to creta a ...
   - [New Leaf Gallery](https://nookipedia.com/wiki/Animal_Crossing:_New_Leaf/Gallery)
   - Colours: [ref](https://gist.github.com/Wunkolo/e0e1c8fef98dfcee806b)
   - [Nintendo 3DS Themes](https://nookipedia.com/wiki/Category:Nintendo_3DS_themes)
-- ~~use Humanist Sans-Serif Font~~
-  - ~~[M PLUS 2](https://fonts.google.com/specimen/M+PLUS+2)~~
-  - ~~[webpage](https://mplusfonts.github.io)~~
 - clean buttons
 - **_rounded corners_** -> _friendly_
-- ~~some easy bento box layouts [ref](https://bentogrids.com)(?)~~
-  - ~~<https://ibelick.com/blog/create-bento-grid-layouts>~~
-- (blurred) shadows(?)
-- good looking animations(?)
-- ~~components & atomic modification~~
-  - ~~<https://smacss.com/book/categorizing/>~~
-- ~~try to stay light to medium complexity~~
-  - ~~complexity 1: <https://ajusa.github.io/lit/>~~
-  - ~~complexity 10: <https://getbootstrap.com/>, <https://bulma.io/>~~
-  - ~~chiisai: 4 to 7~~
-- mobile first ~~responsiveness first~~
+- (blurred) shadows
+- good looking animations
+- mobile first
 - develop for _[all](https://youtu.be/su6WA0kUUJE)_ sizes
-- ~~defensive css <https://defensivecss.dev>~~
-- ~~animal crossing wiki(?) [ref](https://nookipedia.com/wiki/Main_Page)~~
-- ~~try to keep it small, don't put in way to many components~~
-
-## reference css frameworks
-
-- ~~<https://stackdiary.com/minimal-css-frameworks/>~~
-- <https://picocss.com>
-- <https://milligram.io>
-- <https://jenil.github.io/chota>
-- <https://www.getpapercss.com>
-- <https://sakofchit.github.io/system.css>
-- <https://oxal.org/projects/sakura>
-- <https://ajusa.github.io/lit>
-- <https://useaxentix.com>
-- <https://edwardtufte.github.io/tufte-css>
