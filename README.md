@@ -4,32 +4,19 @@
 </p>
 <hr>
 
-## compile
-
-```bash
-# minified version
-sass --no-source-map --style compressed src/chiisai.scss:dist/chiisai.min.css
-# normal version
-sass --no-source-map src/chiisai.scss:dist/chiisai.css
-```
-
 ## goal
 
 The goal is to creta a ...
 
 ## todo
 
-- [ ] rework the normalize
-- [ ] rework the colour palette
-- [ ] rechange the utils
+- [ ] rework the colour palette (most likely into okchl)
 - [ ] take more ideas from [cirrus](https://cirrus-ui.com) and [bulma](https://bulma.io)
 - [ ] create a _stylistic_ logo
-- [ ] steamline the development process, make it easier
-  - [ ] in that change the process and maybe folder structure
 
 ## inspiration's
 
-- https://nookipedia.com/wiki/Main_Page
+- [nookipedia.com](https://nookipedia.com/wiki/Main_Page)
 - [Hyperplexed - Websites Need More Mario UI](https://youtu.be/x872keruUWQ?si=6xeduMSppN0E1DlP)
 - [Web Design Engineering With the New CSS | Matthias Ott](https://youtu.be/su6WA0kUUJE?si=2N7K4UFs6SLr8Npx)
 - [Be the Browser's Mentor, not its Micromanager with Andy Bell — SmashingConf Freiburg 2022](https://youtu.be/JqnMI1AXl6w?si=S_UtzEi9uznkdMHj)
