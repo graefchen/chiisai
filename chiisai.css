@@ -2,7 +2,7 @@
  *  █▀▀ █░█ █ █ █▀ ▄▀█ █
  *  █▄▄ █▀█ █ █ ▄█ █▀█ █.css
  *
- * 
+ * an modern, friendly, aesthetically minimalistic css framework
  *
  */
 
@@ -11,6 +11,7 @@
    * █▀▀ █▀█ █░░ █▀█ █░█ █▀█ █▀
    * █▄▄ █▄█ █▄▄ █▄█ █▄█ █▀▄ ▄█
    *
+   * TODO: Either inspired by AC:NL or a RampenSau Gradient
    */
   --bg: #2a2a2a;
   --fg: #ffffff;
@@ -299,7 +300,7 @@ small {
   --grid-min-item-size: clamp(16rem, 50vw, 26rem);
 }
 
-/* 
+/*
  * █░█ ▀█▀ █ █░░ █▀
  * █▄█ ░█░ █ █▄▄ ▄█
  */
@@ -315,9 +316,12 @@ small {
   justify-content: center;
 }
 
-/* The flow utility. Creates a top margin of the font height of the element.
-   inspired by the flow composition of the cube-boilerplate by set-studio:
-   https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main */
+/*
+ * The flow utility. Creates a top margin of the font height of the element.
+ * inspired by the flow composition of the cube-boilerplate by set-studio:
+ * https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main
+ *
+ */
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
 }
