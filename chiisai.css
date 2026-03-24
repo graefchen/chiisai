@@ -11,12 +11,20 @@
    * █▀▀ █▀█ █░░ █▀█ █░█ █▀█ █▀
    * █▄▄ █▄█ █▄▄ █▄█ █▄█ █▀▄ ▄█
    *
-   * TODO: Either inspired by AC:NL or a RampenSau Gradient
+   * TODO: Either inspired by AC:NL or AC:NH
+   *
    */
   --bg: #2a2a2a;
   --fg: #ffffff;
   --ac: #ffcad4;
 
+  /*
+   * █▀▀ █░░ █░█ █ █▀▄ █ ▀█▀ █▄█
+   * █▀  █▄▄ █▄█ █ █▄▀ █ ░█░ ░█░
+   *
+   * working with fluidity to make it very modern looking
+   *
+   */
   --size-step--1: clamp(0.7956rem, 0.8387rem + -0.0269vw, 0.8333rem);
   --size-step-0: clamp(1rem, 0.9821rem + 0.0893vw, 1.125rem);
   --size-step-1: clamp(1.2rem, 1.1442rem + 0.2791vw, 1.5908rem);
@@ -40,6 +48,8 @@
 /*
  * █▄░█ █▀█ █▀█ █▀▄▀█ ▄▀█ █░░ █ ▀█ █▀▀
  * █░▀█ █▄█ █▀▄ █░▀░█ █▀█ █▄▄ █ █▄ ██▄
+ *
+ * normalising the css to create a decent baseline
  * 
  * based on:
  * - https://defensivecss.dev/articles/intro-defensive-css/
@@ -216,6 +226,9 @@ dd {
 /*
  * ▄▀█ █▀▀ █▀▀ █▀▀ █▀ █▀ █ █▄▄ █ █░░ █ ▀█▀ █▄█
  * █▀█ █▄▄ █▄▄ ██▄ ▄█ ▄█ █ █▄█ █ █▄▄ █ ░█░ ░█░
+ *
+ * TODO: many more accessibility need should be accomodated for!
+ *
  */
 
 /* disabling all animations, !important so that *nothing* overrides it */
@@ -232,6 +245,9 @@ dd {
 /*
  * ▀█▀ █▄█ █▀█ █▀█ █▀▀ █▀█ ▄▀█ █▀█ █░█ █▄█
  * ░█░ ░█░ █▀▀ █▄█ █▄█ █▀▄ █▀█ █▀▀ █▀█ ░█░
+ *
+ * everything to do with typeography
+ *
  */
 
 h1,
@@ -284,7 +300,12 @@ small {
 /*
  * █▀▀ █▀█ █▀▄▀█ █▀█ █▀█ █▀ █ ▀█▀ █ █▀█ █▄░█
  * █▄▄ █▄█ █░▀░█ █▀▀ █▄█ ▄█ █ ░█░ █ █▄█ █░▀█
+ *
+ * classes that help with the composition of the webpage
+ *
  */
+
+ /* GRID */
 
 .grid {
   display: grid;
@@ -300,9 +321,24 @@ small {
   --grid-min-item-size: clamp(16rem, 50vw, 26rem);
 }
 
+/* FLOW */
+
+/*
+ * The flow utility. Creates a top margin of the font height of the element.
+ * inspired by the flow composition of the cube-boilerplate by set-studio:
+ * https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main
+ *
+ */
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
 /*
  * █░█ ▀█▀ █ █░░ █▀
  * █▄█ ░█░ █ █▄▄ ▄█
+ *
+ * all the utility parts
+ *
  */
 
 .full-screen {
@@ -314,16 +350,6 @@ small {
   align-items: center;
   display: flex;
   justify-content: center;
-}
-
-/*
- * The flow utility. Creates a top margin of the font height of the element.
- * inspired by the flow composition of the cube-boilerplate by set-studio:
- * https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main
- *
- */
-.flow > * + * {
-  margin-top: var(--flow-space, 1em);
 }
 
 .region {
@@ -341,9 +367,19 @@ small {
   text-align: center;
 }
 
+.downcase {
+  text-transform: lowercase;
+}
+
+.upcase {
+  text-transform: uppercase;
+}
+
 /*
  * █▄▄ ▄▀█ █▀ █▀▀
  * █▄█ █▀█ ▄█ ██▄
+ *
+ * mainly for testing ...
  */
 
 body {
