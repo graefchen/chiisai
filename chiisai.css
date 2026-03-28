@@ -2,21 +2,39 @@
  *  █▀▀ █░█ █ █ █▀ ▄▀█ █
  *  █▄▄ █▀█ █ █ ▄█ █▀█ █.css
  *
- * an modern, friendly, aesthetically minimalistic css framework
+ * an modern, friendly css framework
  *
  */
 
 :root {
   /*
-   * █▀▀ █▀█ █░░ █▀█ █░█ █▀█ █▀
-   * █▄▄ █▄█ █▄▄ █▄█ █▄█ █▀▄ ▄█
+   * █▀▀ █▀█ █░░ █▀█ █░█ █▀█ ▄▄ █▀▄ █▀▀ █▀▀ █ █▄░█ █ ▀█▀ █ █▀█ █▄░█ █▀
+   * █▄▄ █▄█ █▄▄ █▄█ █▄█ █▀▄ ░░ █▄▀ ██▄ █▀  █ █░▀█ █ ░█░ █ █▄█ █░▀█ ▄█
    *
-   * TODO: Either inspired by AC:NL or AC:NH
+   * NOTE: Colours inspired by Animal Crossing: New Leaf.
+   *       Following an Semantic Scheme.
+   *       Why? Because it seems to me like less work.
+   *       And because it seems like it is the most used
+   *       system by other css-frameworks.
+   *       Additionally it makes it easier to see that a
+   *       site was created with chiisai.css and also
+   *       lets users use their own color-scheme.
+   *       The current definitions is inspired by the Cirrus
+   *       SCSS framework.
    *
    */
-  --bg: #2a2a2a;
-  --fg: #ffffff;
-  --ac: #ffcad4;
+  --primary: #ccff88;
+  --dark: #222222;
+  --light: #eeeeee;
+  --link: #1077ff;
+  --link-dark: #0000ff;
+  --info: #00cdff;
+  --success: #88ff00;
+  --warning: #ffaa22;
+  --danger: #ff0000;
+  --transparent: transparent;
+  --black: #000000;
+  --white: #ffffff;
 
   /*
    * █▀▀ █░░ █░█ █ █▀▄ █ ▀█▀ █▄█
@@ -145,13 +163,6 @@ a {
  * [1] Remove the underline when there is href is not set.
  * [2] Setting the color to the current color when href is not set.
  */
-h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
-}
-
 a:not([href]) {
   text-decoration-skip-ink: auto;
   color: currentColor;
@@ -246,9 +257,22 @@ dd {
  * ▀█▀ █▄█ █▀█ █▀█ █▀▀ █▀█ ▄▀█ █▀█ █░█ █▄█
  * ░█░ ░█░ █▀▀ █▄█ █▄█ █▀▄ █▀█ █▀▀ █▀█ ░█░
  *
- * everything to do with typeography
+ * everything to do with typography,
  *
  */
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p,
+li,
+blockquote {
+  text-wrap: pretty;
+}
 
 h1,
 h2,
@@ -305,7 +329,7 @@ small {
  *
  */
 
- /* GRID */
+/* GRID */
 
 .grid {
   display: grid;
@@ -376,6 +400,159 @@ small {
 }
 
 /*
+ * █▀▀ █▀█ █░░ █▀█ █░█ █▀█ █▀
+ * █▄▄ █▄█ █▄▄ █▄█ █▄█ █▀▄ ▄█ 
+ */
+
+/* BACKGROUNDS */
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-dark {
+  background-color: var(--dark);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.bg-link {
+  background-color: var(--link);
+}
+
+.bg-link-dark {
+  background-color: var(--link-dark);
+}
+
+.bg-info {
+  background-color: var(--info);
+}
+
+.bg-success {
+  background-color: var(--success);
+}
+
+.bg-warning {
+  background-color: var(--warning);
+}
+
+.bg-danger {
+  background-color: var(--danger);
+}
+
+.bg-transparent {
+  background-color: var(--transparent);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+/* FOREGROUND */
+.text-dark {
+  color: var(--dark);
+}
+
+.text-light {
+  color: var(--light);
+}
+
+.text-light {
+  color: var(--light);
+}
+
+.text-link {
+  color: var(--link);
+}
+
+.text-link-dark {
+  color: var(--link-dark);
+}
+
+.text-info {
+  color: var(--info);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-warning {
+  color: var(--warning);
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+.text-transparent {
+  color: var(--transparent);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+/* BORDER */
+
+.fg-primary {
+  border-color: var(--primary);
+}
+
+.fg-dark {
+  border-color: var(--dark);
+}
+
+.fg-light {
+  border-color: var(--light);
+}
+
+.fg-link {
+  border-color: var(--link);
+}
+
+.fg-link-dark {
+  border-color: var(--link-dark);
+}
+
+.fg-info {
+  border-color: var(--info);
+}
+
+.fg-success {
+  border-color: var(--success);
+}
+
+.fg-warning {
+  border-color: var(--warning);
+}
+
+.fg-danger {
+  border-color: var(--danger);
+}
+
+.fg-transparent {
+  border-color: var(--transparent);
+}
+
+.fg-black {
+  border-color: var(--black);
+}
+
+.fg-white {
+  border-color: var(--white);
+}
+
+/*
  * █▄▄ ▄▀█ █▀ █▀▀
  * █▄█ █▀█ ▄█ ██▄
  *
@@ -383,14 +560,6 @@ small {
  */
 
 body {
-  background-color: var(--bg);
-  color: var(--fg);
-}
-
-.fg-dark {
-  color: var(--bg);
-}
-
-.bg-accent {
-  background-color: var(--ac);
+  background-color: var(--dark);
+  color: var(--light);
 }
