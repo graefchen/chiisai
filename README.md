@@ -13,7 +13,7 @@
  - [ ] solarpunk
  - [ ] environmental
  - [ ] sustainability
- - [ ] modern, with a slight Art Nouveau touch
+ - [x] modern, with a slight Art Nouveau touch
 
 ## inspiration's
 

@@ -1,27 +1,33 @@
 /*
- *  █▀▀ █░█ █ █ █▀ ▄▀█ █
- *  █▄▄ █▀█ █ █ ▄█ █▀█ █.css
+ * █▀▀ █░█ █ █ █▀ ▄▀█ █
+ * █▄▄ █▀█ █ █ ▄█ █▀█ █.css
  *
  * an modern, friendly css framework
  *
  */
+
+/* uncomment the following file to get the font from google webfont */
+/* @import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap'); */
 
 :root {
   /*
    * █▀▀ █▀█ █░░ █▀█ █░█ █▀█ ▄▄ █▀▄ █▀▀ █▀▀ █ █▄░█ █ ▀█▀ █ █▀█ █▄░█ █▀
    * █▄▄ █▄█ █▄▄ █▄█ █▄█ █▀▄ ░░ █▄▀ ██▄ █▀  █ █░▀█ █ ░█░ █ █▄█ █░▀█ ▄█
    *
-   * NOTE: Colours inspired by Animal Crossing: New Leaf.
-   *       Following an Semantic Scheme.
-   *       Why? Because it seems to me like less work.
-   *       And because it seems like it is the most used
-   *       system by other css-frameworks.
-   *       Additionally it makes it easier to see that a
-   *       site was created with chiisai.css and also
-   *       lets users use their own color-scheme.
-   *       The current definitions is inspired by the Cirrus
-   *       SCSS framework.
+   * Colours inspired by Animal Crossing: New Leaf.
+   * Following an Semantic Scheme.
+   * Why? Because it seems to me like less work.
+   * And because it seems like it is the most used
+   * system by other css-frameworks.
+   * Additionally it makes it easier to see that a
+   * site was created with chiisai.css and also
+   * lets users use their own color-scheme.
+   * The current definitions is inspired by the Cirrus
+   * SCSS framework.
+   * Uses the Amarante[1] Typeface by Karolina Lach[2]
    *
+   * [1]: https://www.karolinalach.com/amarante.html
+   * [2]: https://karolinalach.com
    */
   --primary: #ccff88;
   --dark: #222222;
@@ -30,7 +36,7 @@
   --link-dark: #0000ff;
   --info: #00cdff;
   --success: #88ff00;
-  --warning: #ffaa22;
+  --warning: #ffdd00;
   --danger: #ff0000;
   --transparent: transparent;
   --black: #000000;
@@ -235,6 +241,22 @@ dd {
 }
 
 /*
+ * █▄▄ ▄▀█ █▀ █▀▀
+ * █▄█ █▀█ ▄█ ██▄
+ *
+ * fixing some minor problems with the reset, like the links.
+ *
+ */
+
+a[href] {
+  color: var(--link);
+
+  &:visited {
+    color: var(--link-dark);
+  }
+}
+
+/*
  * ▄▀█ █▀▀ █▀▀ █▀▀ █▀ █▀ █ █▄▄ █ █░░ █ ▀█▀ █▄█
  * █▀█ █▄▄ █▄▄ ██▄ ▄█ ▄█ █ █▄█ █ █▄▄ █ ░█░ ░█░
  *
@@ -321,6 +343,15 @@ small {
   font-size: var(--size-step--1);
 }
 
+/* fonts used by chiisai */
+
+/* Amarante is a cozy and amazing Art Nouveau font */
+.font-amarante {
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*
  * █▀▀ █▀█ █▀▄▀█ █▀█ █▀█ █▀ █ ▀█▀ █ █▀█ █▄░█
  * █▄▄ █▄█ █░▀░█ █▀▀ █▄█ ▄█ █ ░█░ █ █▄█ █░▀█
@@ -329,7 +360,7 @@ small {
  *
  */
 
-/* GRID */
+/* grid */
 
 .grid {
   display: grid;
@@ -345,7 +376,48 @@ small {
   --grid-min-item-size: clamp(16rem, 50vw, 26rem);
 }
 
-/* FLOW */
+/* list */
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  .reverse {
+    flex-direction: column-reverse;
+  }
+
+  &.center {
+    align-items: center;
+  }
+}
+
+/* gaps */
+.grid,
+.list {
+  &.gap-xs {
+    gap: var(--space-xs-s);
+  }
+  &.gap-s {
+    gap: var(--space-s-m);
+  }
+  &.gap-m {
+    gap: var(--space-m-l);
+  }
+  &.gap-l {
+    gap: var(--space-l-xl);
+  }
+  &.gap-xl {
+    gap: var(--space-xl-2xl);
+  }
+}
+
+/*
+ * █░█ ▀█▀ █ █░░ █▀
+ * █▄█ ░█░ █ █▄▄ ▄█
+ *
+ * all the utility parts
+ *
+ */
 
 /*
  * The flow utility. Creates a top margin of the font height of the element.
@@ -357,22 +429,138 @@ small {
   margin-top: var(--flow-space, 1em);
 }
 
-/*
- * █░█ ▀█▀ █ █░░ █▀
- * █▄█ ░█░ █ █▄▄ ▄█
- *
- * all the utility parts
- *
- */
+/* margins */
+.m-xs,
+.mt-xs,
+.mr-xs,
+.mb-xs,
+.ml-xs,
+.mx-xs,
+.my-xs {
+  margin: var(--space-xs-s);
+}
+
+.m-s,
+.mt-s,
+.mr-s,
+.mb-s,
+.ml-s,
+.mx-s,
+.my-s {
+  margin: var(--space-s-m);
+}
+
+.m-m,
+.mt-m,
+.mr-m,
+.mb-m,
+.ml-m,
+.mx-m,
+.my-m {
+  margin: var(--space-m-l);
+}
+
+.m-l,
+.mt-l,
+.mr-l,
+.mb-l,
+.ml-l,
+.mx-l,
+.my-l {
+  margin: var(--space-l-xl);
+}
+
+.m-xl,
+.mt-xl,
+.mr-xl,
+.mb-xl,
+.ml-xl,
+.mx-xl,
+.my-xl {
+  margin: var(--space-xl-2xl);
+}
+
+.m-auto,
+.mt-auto,
+.mr-auto,
+.mb-auto,
+.ml-auto,
+.mx-auto,
+.my-auto {
+  margin: auto;
+}
+
+/* paddings */
+.p-xs,
+.pt-xs,
+.pr-xs,
+.pb-xs,
+.pl-xs,
+.px-xs,
+.py-xs {
+  padding: var(--space-xs-s);
+}
+
+.p-s,
+.pt-s,
+.pr-s,
+.pb-s,
+.pl-s,
+.px-s,
+.py-s {
+  padding: var(--space-s-m);
+}
+
+.p-m,
+.pt-m,
+.pr-m,
+.pb-m,
+.pl-m,
+.px-m,
+.py-m {
+  padding: var(--space-m-l);
+}
+
+.p-l,
+.pt-l,
+.pr-l,
+.pb-l,
+.pl-l,
+.px-l,
+.py-l {
+  padding: var(--space-l-xl);
+}
+
+.p-xl,
+.pt-xl,
+.pr-xl,
+.pb-xl,
+.pl-xl,
+.px-xl,
+.py-xl {
+  padding: var(--space-xl-2xl);
+}
+
+.p-auto,
+.pt-auto,
+.pr-auto,
+.pb-auto,
+.pl-auto,
+.px-auto,
+.py-auto {
+  padding: auto;
+}
 
 .full-screen {
   width: 100%;
   height: 100svh;
 }
 
-.center {
-  align-items: center;
+/* not pseudoclass, so this will not override .list */
+:not(.list).center {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -387,6 +575,7 @@ small {
   max-width: 60rem;
 }
 
+/* text utilities */
 .text-center {
   text-align: center;
 }
@@ -551,6 +740,16 @@ small {
 .fg-white {
   border-color: var(--white);
 }
+
+/*
+ * █▀▀ █░░ █▀▀ █▀▄▀█ █▀▀ █▄░█ ▀█▀ █▀
+ * ██▄ █▄▄ ██▄ █░▀░█ ██▄ █░▀█ ░█░ ▄█
+ *
+ * elements that are predefined in this framework
+ *
+ * TODO: create 'em
+ *
+ */
 
 /*
  * █▄▄ ▄▀█ █▀ █▀▀
