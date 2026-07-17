@@ -6,7 +6,7 @@
  *
  */
 
-/* uncomment the following file to get the font from google webfont */
+/* uncomment the following file to get the fonts from google webfont */
 /* @import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap'); */
 
 :root {
@@ -24,10 +24,7 @@
    * lets users use their own color-scheme.
    * The current definitions is inspired by the Cirrus
    * SCSS framework.
-   * Uses the Amarante[1] Typeface by Karolina Lach[2]
    *
-   * [1]: https://www.karolinalach.com/amarante.html
-   * [2]: https://karolinalach.com
    */
   --primary: #ccff88;
   --dark: #222222;
@@ -85,6 +82,7 @@
  * [1] Set the box-sizing for every object to border box.
  *     => The usage of a way more intuitive box-sizing model.
  */
+
 *,
 *::before,
 *::after {
@@ -345,12 +343,22 @@ small {
 
 /* fonts used by chiisai */
 
-/* Amarante is a cozy and amazing Art Nouveau font */
+/* Amarante[1] is a cozy and amazing Art Nouveau Typeface by Karolina Lach[2].
+ *
+ * [1]: https://www.karolinalach.com/amarante.html
+ * [2]: https://karolinalach.com
+ */
 .font-amarante {
   font-family: "Amarante", serif;
   font-weight: 400;
   font-style: normal;
 }
+
+/* TODO: (2026-07-17) Add more fonts
+ *       1. A good looking sans-serif font.
+ *       2. A good looking font with many rounded corners.
+ *       3. Possibly a modern monospace font. 
+ */
 
 /*
  * █▀▀ █▀█ █▀▄▀█ █▀█ █▀█ █▀ █ ▀█▀ █ █▀█ █▄░█
@@ -382,8 +390,15 @@ small {
   display: flex;
   flex-direction: column;
 
-  .reverse {
+  &.row {
+    flex-direction: row;
+  }
+
+  &.reverse {
     flex-direction: column-reverse;
+    &:has(.row) {
+      flex-direction: row-reverse;
+    }
   }
 
   &.center {
@@ -391,7 +406,7 @@ small {
   }
 }
 
-/* gaps */
+/* gaps that affect grids and lists */
 .grid,
 .list {
   &.gap-xs {
@@ -424,133 +439,86 @@ small {
  * inspired by the flow composition of the cube-boilerplate by set-studio:
  * https://github.com/Set-Creative-Studio/cube-boilerplate/tree/main
  *
+ * Other names can be: prose
  */
-.flow > * + * {
+.flow > * + *,
+.prose > * + * {
   margin-top: var(--flow-space, 1em);
 }
 
 /* margins */
-.m-xs,
-.mt-xs,
-.mr-xs,
-.mb-xs,
-.ml-xs,
-.mx-xs,
-.my-xs {
+.m-xs {
   margin: var(--space-xs-s);
 }
 
-.m-s,
-.mt-s,
-.mr-s,
-.mb-s,
-.ml-s,
-.mx-s,
-.my-s {
+.m-s {
   margin: var(--space-s-m);
 }
 
-.m-m,
-.mt-m,
-.mr-m,
-.mb-m,
-.ml-m,
-.mx-m,
-.my-m {
+.m-m {
   margin: var(--space-m-l);
 }
 
-.m-l,
-.mt-l,
-.mr-l,
-.mb-l,
-.ml-l,
-.mx-l,
-.my-l {
+.m-l {
   margin: var(--space-l-xl);
 }
 
-.m-xl,
-.mt-xl,
-.mr-xl,
-.mb-xl,
-.ml-xl,
-.mx-xl,
-.my-xl {
+.m-xl {
   margin: var(--space-xl-2xl);
 }
 
-.m-auto,
-.mt-auto,
-.mr-auto,
-.mb-auto,
-.ml-auto,
-.mx-auto,
-.my-auto {
+.m-auto {
   margin: auto;
 }
 
 /* paddings */
-.p-xs,
-.pt-xs,
-.pr-xs,
-.pb-xs,
-.pl-xs,
-.px-xs,
-.py-xs {
+.p-xs {
   padding: var(--space-xs-s);
 }
 
-.p-s,
-.pt-s,
-.pr-s,
-.pb-s,
-.pl-s,
-.px-s,
-.py-s {
+.p-s {
   padding: var(--space-s-m);
 }
 
-.p-m,
-.pt-m,
-.pr-m,
-.pb-m,
-.pl-m,
-.px-m,
-.py-m {
+.p-m {
   padding: var(--space-m-l);
 }
 
-.p-l,
-.pt-l,
-.pr-l,
-.pb-l,
-.pl-l,
-.px-l,
-.py-l {
+.p-l {
   padding: var(--space-l-xl);
 }
 
-.p-xl,
-.pt-xl,
-.pr-xl,
-.pb-xl,
-.pl-xl,
-.px-xl,
-.py-xl {
+.p-xl {
   padding: var(--space-xl-2xl);
 }
 
-.p-auto,
-.pt-auto,
-.pr-auto,
-.pb-auto,
-.pl-auto,
-.px-auto,
-.py-auto {
+.p-auto {
   padding: auto;
 }
 
+/* TODO: (2026-07-17) Rework to use own values instead of tailwinds */
+
+.rounded-xs {
+  border-radius: 2px;
+}
+
+.rounded-s {
+  border-radius: 4px;
+}
+
+.rounded-m {
+  border-radius: 6px;
+}
+
+.rounded-l {
+  border-radius: 8px;
+}
+
+.rounded-xl {
+  border-radius: 12px;
+}
+
+/* making an element fit the full screen */
 .full-screen {
   width: 100%;
   height: 100svh;
@@ -693,51 +661,51 @@ small {
 
 /* BORDER */
 
-.fg-primary {
+.border-primary {
   border-color: var(--primary);
 }
 
-.fg-dark {
+.border-dark {
   border-color: var(--dark);
 }
 
-.fg-light {
+.border-light {
   border-color: var(--light);
 }
 
-.fg-link {
+.border-link {
   border-color: var(--link);
 }
 
-.fg-link-dark {
+.border-link-dark {
   border-color: var(--link-dark);
 }
 
-.fg-info {
+.border-info {
   border-color: var(--info);
 }
 
-.fg-success {
+.border-success {
   border-color: var(--success);
 }
 
-.fg-warning {
+.border-warning {
   border-color: var(--warning);
 }
 
-.fg-danger {
+.border-danger {
   border-color: var(--danger);
 }
 
-.fg-transparent {
+.border-transparent {
   border-color: var(--transparent);
 }
 
-.fg-black {
+.border-black {
   border-color: var(--black);
 }
 
-.fg-white {
+.border-white {
   border-color: var(--white);
 }
 
@@ -758,7 +726,9 @@ small {
  * mainly for testing ...
  */
 
+/*
 body {
   background-color: var(--dark);
   color: var(--light);
 }
+*/

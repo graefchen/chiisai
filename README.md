@@ -1,19 +1,19 @@
-<h1 align="center">chiisai</h1>
-<p align="center">
-  <i>An modern, friendly css framework</i>
-</p>
-<hr>
+# chiisai
+
+_An modern, friendly css framework_
+
+---
 
 ## todo
 
 - [x] rework the colour palette (most likely into okchl)
 - [ ] take more ideas from [cirrus](https://cirrus-ui.com) and [bulma](https://bulma.io)
 - [ ] create a _stylistic_ logo
-- get it to fit following aesthetic
- - [ ] solarpunk
- - [ ] environmental
- - [ ] sustainability
- - [x] modern, with a slight Art Nouveau touch
+  - get it to fit following aesthetic:
+  - [ ] solarpunk
+  - [ ] environmental
+  - [ ] sustainability
+  - [x] modern, with a slight Art Nouveau touch
 
 ## inspiration's
 
@@ -26,8 +26,8 @@
 
 ## plan
 
--  inspired by [Animal Crossing: New Leaf](https://en.wikipedia.org/wiki/Animal_Crossing:_New_Leaf)
-and [Animal Crossing: New Horizons](https://en.wikipedia.org/wiki/Animal_Crossing:_New_Horizons)
+- inspired by [Animal Crossing: New Leaf](https://en.wikipedia.org/wiki/Animal_Crossing:_New_Leaf)
+  and [Animal Crossing: New Horizons](https://en.wikipedia.org/wiki/Animal_Crossing:_New_Horizons)
   - [New Leaf Gallery](https://nookipedia.com/wiki/Animal_Crossing:_New_Leaf/Gallery)
   - Colours: [ref](https://gist.github.com/Wunkolo/e0e1c8fef98dfcee806b)
   - [Nintendo 3DS Themes](https://nookipedia.com/wiki/Category:Nintendo_3DS_themes)
